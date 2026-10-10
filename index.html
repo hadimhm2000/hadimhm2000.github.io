@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hadi Montazeran</title>
+<meta name="description" content="Hadi Montazeran, Automation Developer | Python · RPA · AI Document Processing">
+<meta property="og:title" content="Hadi Montazeran, Automation Developer | Python · RPA · AI Document Processing">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Vazirmatn:wght@400;500;700;800&display=swap">
+<style>
+/* Design read: developer portfolio for recruiters and hiring managers, precise engineering-editorial language, native CSS.
+   Dials: DESIGN_VARIANCE 7 / MOTION_INTENSITY 5 / VISUAL_DENSITY 4.
+   Layout: asymmetric split hero with a live working component, then a different layout family per section.
+   Shape lock: blocks 22px, inner cells and inputs 14px, buttons and chips full pill.
+   Z scale: nav 20, grain 30. */
+:root{
+  --bg:#f2f3f5; --surface:#fbfbfc; --ink:#0f1218; --ink-2:#4a515e; --ink-3:#6f7684;
+  --line:#dde1e7; --accent:#2b48d6; --accent-soft:#e3e8fb; --block:#2b48d6; --block-ink:#f4f6ff; --block-ink-2:#c9d2fb;
+  --ok:#11795a; --bad:#bf3b26; --dot:#c9ced7; --shadow:rgba(31,45,110,.10);
+  --f-sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --f-fa:"Vazirmatn",Tahoma,system-ui,sans-serif;
+  --r-lg:22px; --r-md:14px; --max:1240px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c0e12; --surface:#14171d; --ink:#eceef2; --ink-2:#a8aebb; --ink-3:#7d8492;
+  --line:#242932; --accent:#8b9dff; --accent-soft:#1a2142; --block:#2a3fb8; --block-ink:#eef1ff; --block-ink-2:#b9c4f7;
+  --ok:#4fc99b; --bad:#ff8a74; --dot:#2a303a; --shadow:rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c0e12; --surface:#14171d; --ink:#eceef2; --ink-2:#a8aebb; --ink-3:#7d8492;
+  --line:#242932; --accent:#8b9dff; --accent-soft:#1a2142; --block:#2a3fb8; --block-ink:#eef1ff; --block-ink-2:#b9c4f7;
+  --ok:#4fc99b; --bad:#ff8a74; --dot:#2a303a; --shadow:rgba(0,0,0,.35); color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html[lang="fa"] body{font-family:var(--f-fa);font-size:16.5px;line-height:1.95}
+html:not([lang="fa"]) [data-lang="fa"]{display:none!important}
+html[lang="fa"] [data-lang="en"]{display:none!important}
+body::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;text-wrap:balance}
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3{font-family:var(--f-fa);letter-spacing:0;font-weight:800}
+p,li{text-wrap:pretty}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;inset-inline-start:16px;top:-60px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px;z-index:40;text-decoration:none;font-size:14px}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+.mono{font-family:var(--f-mono)}
+.num{font-variant-numeric:tabular-nums}
+.ico{width:1.1em;height:1.1em;flex:none;display:block}
+html[dir="rtl"] .flip{transform:scaleX(-1)}
+.eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+html[lang="fa"] .eyebrow{font-family:var(--f-fa);text-transform:none;letter-spacing:0;font-size:14px;font-weight:500}
+.lead{color:var(--ink-2);max-width:60ch}
+.role{display:grid;gap:6px;justify-items:start}
+.role strong{font-size:clamp(19px,1.8vw,22px);font-weight:600;letter-spacing:-.015em;line-height:1.3}
+html[lang="fa"] .role strong{font-weight:700;letter-spacing:0}
+.role .title{display:inline-block;font-size:clamp(14.5px,1.35vw,16.5px);font-weight:500;color:var(--accent);background:var(--accent-soft);padding:5px 14px;border-radius:999px;line-height:1.45;font-family:var(--f-sans);unicode-bidi:isolate}
+@media (max-width:520px){.role .title{border-radius:var(--r-md);font-size:14px}}
+
+/* buttons: pills */
+.btn{display:inline-flex;align-items:center;gap:10px;font:inherit;font-size:15.5px;font-weight:500;white-space:nowrap;text-decoration:none;padding:12px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .25s var(--ease),background-color .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{background:var(--accent);color:var(--block-ink)}
+html[data-theme="dark"] .btn-primary:hover{color:var(--bg)}
+.btn-quiet{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-quiet:hover{border-color:var(--ink-3)}
+
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.stuck{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:16px;letter-spacing:-.01em;white-space:nowrap}
+html[lang="fa"] .brand{font-weight:700}
+.brand i{width:9px;height:9px;border-radius:3px;background:var(--accent);display:block;flex:none}
+.links{display:flex;gap:4px;margin-inline-start:auto}
+.links a{font-size:14.5px;text-decoration:none;color:var(--ink-2);padding:7px 12px;border-radius:999px;transition:color .2s,background-color .2s}
+.links a:hover{color:var(--ink)}
+.links a.on{color:var(--ink);background:color-mix(in srgb,var(--ink) 7%,transparent)}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);flex:none}
+.lang button{font:inherit;font-size:13px;border:0;background:transparent;color:var(--ink-2);padding:4px 11px;border-radius:999px;cursor:pointer;line-height:1.4;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.lang button:last-child{font-family:var(--f-fa)}
+@media (max-width:820px){.links{display:none}.lang{margin-inline-start:auto}}
+
+/* hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(56px,8vw,104px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,5vw,72px);align-items:center}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(40px,4.5vw,62px);line-height:1.03;letter-spacing:-.045em;margin-top:22px;max-width:17ch}
+html[lang="fa"] .hero h1{font-size:clamp(34px,4.5vw,56px);line-height:1.4;max-width:15ch}
+.hero .lead{font-size:clamp(17px,1.6vw,19.5px);margin-top:24px;max-width:46ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+@media (prefers-reduced-motion:no-preference){
+  .rise{animation:rise .9s var(--ease) both}
+  .rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.16s}.rise.d3{animation-delay:.24s}.rise.d4{animation-delay:.34s}
+  @keyframes rise{from{transform:translateY(16px);opacity:.15}to{transform:none;opacity:1}}
+}
+
+/* live ID check */
+.check{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,2.6vw,28px);box-shadow:0 1px 0 var(--shadow),0 30px 60px -30px var(--shadow);display:grid;gap:18px;min-width:0}
+.check-head{display:grid;gap:4px}
+.check-head strong{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+html[lang="fa"] .check-head strong{font-weight:700}
+.check-head span{font-size:14px;color:var(--ink-2)}
+.field{display:grid;gap:8px}
+.field label{font-size:13.5px;font-weight:500;color:var(--ink-2)}
+.field input{font-family:var(--f-mono);font-size:22px;letter-spacing:.18em;padding:12px 16px;border-radius:var(--r-md);border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%;direction:ltr;text-align:left;font-variant-numeric:tabular-nums;transition:border-color .2s,box-shadow .2s}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+.digits{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;direction:ltr}
+.digits div{display:grid;gap:2px;text-align:center;padding:8px 0 6px;border-radius:10px;background:var(--bg);min-width:0}
+.digits b{font-family:var(--f-mono);font-size:17px;font-weight:500;line-height:1.2}
+.digits small{font-family:var(--f-mono);font-size:10.5px;color:var(--ink-3);line-height:1.2}
+.digits div.ck{background:var(--accent-soft)}
+.digits div.ck small{color:var(--accent)}
+.digits div.pop b{animation:pop .45s var(--ease)}
+@keyframes pop{from{transform:translateY(-6px);opacity:.2}to{transform:none;opacity:1}}
+.math{font-family:var(--f-mono);font-size:13px;color:var(--ink-2);direction:ltr;text-align:left;line-height:1.6;overflow-wrap:anywhere}
+.math em{font-style:normal;color:var(--ink)}
+.verdict{display:flex;align-items:center;gap:10px;font-weight:500;font-size:15.5px;line-height:1.4;min-height:24px}
+.verdict.ok{color:var(--ok)}.verdict.bad{color:var(--bad)}.verdict.wait{color:var(--ink-2)}
+.check-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;border-top:1px solid var(--line);padding-top:16px}
+.check-foot .btns{display:flex;gap:8px}
+.chipbtn{font:inherit;font-size:13.5px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:border-color .2s,transform .2s var(--ease)}
+.chipbtn:hover{border-color:var(--ink-3)}
+.chipbtn:active{transform:scale(.97)}
+.check-foot small{font-size:12.5px;color:var(--ink-3)}
+
+/* stats */
+.stats{border-top:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.stat{padding-block:28px 34px;padding-inline-end:24px;min-width:0}
+.stat+.stat{padding-inline-start:24px;border-inline-start:1px solid var(--line)}
+.stat strong{display:block;font-size:clamp(32px,3.6vw,48px);font-weight:600;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+html[lang="fa"] .stat strong{font-family:var(--f-fa);font-weight:700;letter-spacing:0}
+.stat > span{display:block;margin-top:12px;font-size:14.5px;color:var(--ink-2);line-height:1.45;max-width:28ch}
+@media (max-width:760px){.stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(3){border-inline-start:0;padding-inline-start:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+
+section.sec{padding-block:clamp(72px,10vw,136px) clamp(80px,11vw,148px)}
+.h2{font-size:clamp(32px,4.2vw,54px);line-height:1.05;letter-spacing:-.035em}
+html[lang="fa"] .h2{line-height:1.45}
+
+/* case study: sticky split */
+.case{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+@media (max-width:900px){.case{grid-template-columns:1fr}}
+.case-side{position:sticky;top:110px;display:grid;gap:22px}
+@media (max-width:900px){.case-side{position:static}}
+.case-side .lead{font-size:18px}
+.case-side .h2{font-size:clamp(32px,3.6vw,48px);hyphens:manual}
+.facts{display:grid;gap:14px;margin:6px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:baseline}
+.facts dt{font-size:13.5px;color:var(--ink-3)}
+.facts dd{margin:0;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;direction:ltr}
+html[dir="rtl"] .chips{justify-content:flex-end}
+.chip{font-family:var(--f-mono);font-size:12.5px;padding:4px 11px;border-radius:999px;background:color-mix(in srgb,var(--ink) 6%,transparent);color:var(--ink);white-space:nowrap}
+.case-body{display:grid;gap:clamp(48px,6vw,80px)}
+.case-body article{display:grid;gap:16px}
+.case-body h3{font-size:clamp(24px,2.4vw,30px);line-height:1.2;letter-spacing:-.025em}
+html[lang="fa"] .case-body h3{line-height:1.6}
+.case-body p{color:var(--ink-2);font-size:18px;max-width:58ch}
+html[lang="fa"] .case-body p{font-size:17px}
+.outcomes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.outcomes{grid-template-columns:1fr}}
+.outcomes li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;font-size:15.5px;line-height:1.5}
+.outcomes li svg{color:var(--accent);margin-top:3px}
+.note{font-size:14.5px;color:var(--ink-3)}
+
+/* pipeline: horizontal snap track */
+.pipe-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.pipe-head .lead{margin-top:16px}
+.arrows{display:flex;gap:8px}
+.arrows button{width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,opacity .2s,transform .2s var(--ease)}
+.arrows button:hover:not(:disabled){border-color:var(--ink-3)}
+.arrows button:active:not(:disabled){transform:scale(.95)}
+.arrows button:disabled{opacity:.35;cursor:default}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,320px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;--pad:max(clamp(16px,4vw,48px),calc((100% - var(--max))/2 + clamp(16px,4vw,48px)));scroll-padding-inline:var(--pad);padding-inline:var(--pad);padding-block:36px 14px;scrollbar-width:thin;scrollbar-color:var(--line) transparent;overscroll-behavior-x:contain}
+.stage{scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 24px 26px;display:grid;grid-template-rows:auto 1fr auto;gap:28px;min-height:280px;min-width:0}
+.stage .n{font-family:var(--f-mono);font-size:13px;color:var(--ink-3)}
+.stage h3{font-size:22px;letter-spacing:-.02em;line-height:1.25}
+.stage p{font-size:15px;color:var(--ink-2);margin-top:8px;line-height:1.55}
+.stage .tech{font-family:var(--f-mono);font-size:12px;color:var(--ink-3);direction:ltr;text-align:left}
+.stage.dots{background-color:var(--surface);background-image:radial-gradient(var(--dot) 1.1px,transparent 1.5px);background-size:14px 14px}
+.stage.fill{background:var(--block);border-color:var(--block);color:var(--block-ink)}
+.stage.fill .n,.stage.fill .tech{color:var(--block-ink-2)}
+.stage.fill p{color:var(--block-ink-2)}
+.sync{margin-top:22px;display:flex;gap:14px;align-items:flex-start;color:var(--ink-2);font-size:15.5px;max-width:78ch}
+.sync b{color:var(--ink);font-weight:600}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:clamp(36px,5vw,56px)}
+.cell{border-radius:var(--r-lg);padding:clamp(24px,3vw,36px);display:grid;gap:14px;align-content:start;min-width:0;background:var(--surface);border:1px solid var(--line);transition:transform .35s var(--ease)}
+.cell.wide{grid-column:span 2}
+.cell h3{font-size:clamp(21px,2vw,26px);letter-spacing:-.02em;line-height:1.2}
+html[lang="fa"] .cell h3{line-height:1.6}
+.cell p{color:var(--ink-2);font-size:16px;max-width:56ch}
+.cell.dots{position:relative;isolation:isolate}
+.cell.dots::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background-image:radial-gradient(var(--dot) 1.2px,transparent 1.6px);background-size:16px 16px;mask-image:linear-gradient(to left,#000 10%,transparent 70%);-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 70%)}
+html[dir="rtl"] .cell.dots::before{mask-image:linear-gradient(to right,#000 10%,transparent 70%);-webkit-mask-image:linear-gradient(to right,#000 10%,transparent 70%)}
+.cell.tint{background:var(--accent-soft);border-color:transparent}
+.cell.fill{background:var(--block);border-color:var(--block);color:var(--block-ink)}
+.cell.fill p{color:var(--block-ink-2)}
+.cell.fill .big{color:var(--block-ink)}
+.cell .big{font-size:clamp(40px,5.4vw,76px);font-weight:600;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums;direction:ltr;text-align:start;overflow-wrap:anywhere}
+html[lang="fa"] .cell .big{font-family:var(--f-fa);font-weight:700;letter-spacing:0;direction:rtl}
+.cell .big small{font-size:.32em;letter-spacing:0;font-weight:500;margin-inline-start:.3em;opacity:.8}
+@media (max-width:860px){.bento{grid-template-columns:1fr}.cell.wide{grid-column:auto}}
+
+/* experience: big-year timeline */
+.xp{margin-top:clamp(36px,5vw,56px);display:grid}
+.xp-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(16px,4vw,64px);padding-block:30px 34px;border-top:1px solid var(--line)}
+.xp-row .yr{font-size:clamp(28px,3.4vw,44px);font-weight:500;letter-spacing:-.035em;line-height:1;color:var(--ink-3);font-variant-numeric:tabular-nums}
+html[lang="fa"] .xp-row .yr{font-family:var(--f-fa);letter-spacing:0;font-weight:500;line-height:1.4}
+.xp-row.now .yr{color:var(--ink)}
+.xp-row h3{font-size:22px;letter-spacing:-.02em;line-height:1.3}
+.xp-row .org{color:var(--ink-2);font-size:15.5px;margin-top:4px}
+.xp-row p.d{color:var(--ink-2);margin-top:12px;max-width:58ch}
+@media (max-width:700px){.xp-row{grid-template-columns:1fr}}
+.edu{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(16px,4vw,64px);padding-top:30px;border-top:1px solid var(--line)}
+.edu h3{font-size:18px;color:var(--ink-2);font-weight:500;letter-spacing:-.01em}
+.edu ul{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.edu li{display:grid;gap:2px}
+.edu li b{font-weight:600}
+.edu li span{font-size:15px;color:var(--ink-2)}
+@media (max-width:700px){.edu{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,56px);margin-top:clamp(36px,5vw,56px);align-items:stretch}
+@media (max-width:900px){.skills{grid-template-columns:1fr}}
+.now-card{background:var(--accent-soft);border-radius:var(--r-lg);padding:clamp(26px,3vw,40px);display:grid;align-content:space-between;gap:40px}
+.now-card .k{font-size:14px;color:var(--accent);font-weight:500}
+.now-card h3{font-size:clamp(26px,2.8vw,36px);line-height:1.12;letter-spacing:-.03em;margin-top:10px}
+html[lang="fa"] .now-card h3{line-height:1.55}
+.now-card p{color:var(--ink-2);max-width:42ch}
+.groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px;align-content:start}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.group{display:grid;gap:10px;align-content:start}
+.group h3{font-size:18px;letter-spacing:-.01em}
+.group p{font-size:15px;color:var(--ink-2)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,5vw,80px)}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+.me{display:grid;gap:18px;align-content:start}
+.me img{width:120px;height:120px;border-radius:30px;object-fit:cover;max-width:100%;filter:contrast(1.05)}
+.me strong{font-size:20px;font-weight:600;letter-spacing:-.015em;display:block}
+html[lang="fa"] .me strong{font-weight:700}
+.me span{display:block;color:var(--ink-2);font-size:15px}
+.me .me-title{color:var(--ink);font-weight:500;margin-block:4px 2px;font-family:var(--f-sans);text-align:start;unicode-bidi:isolate}
+.about-body{display:grid;gap:22px}
+.about-body > p{font-size:clamp(19px,1.9vw,23px);line-height:1.5;letter-spacing:-.012em;max-width:40ch}
+html[lang="fa"] .about-body > p{font-size:clamp(17px,1.7vw,20px);line-height:1.95;letter-spacing:0;max-width:52ch}
+.about-body > p + p{color:var(--ink-2)}
+.ways{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.ways li{padding-block:18px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:8px 24px}
+.ways b{font-weight:600}
+.ways span{color:var(--ink-2)}
+@media (max-width:620px){.ways li{grid-template-columns:1fr}}
+
+/* contact block */
+.contact{background:var(--block);color:var(--block-ink);border-radius:calc(var(--r-lg) + 6px);padding:clamp(32px,6vw,80px);display:grid;gap:36px;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background-image:radial-gradient(color-mix(in srgb,var(--block-ink) 16%,transparent) 1.1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(to left,#000,transparent 65%);-webkit-mask-image:linear-gradient(to left,#000,transparent 65%);pointer-events:none}
+html[dir="rtl"] .contact::before{mask-image:linear-gradient(to right,#000,transparent 65%);-webkit-mask-image:linear-gradient(to right,#000,transparent 65%)}
+.contact > *{position:relative}
+.contact .eyebrow{color:var(--block-ink-2)}
+.contact h2{font-size:clamp(34px,5.4vw,68px);line-height:1.02;letter-spacing:-.04em;max-width:15ch}
+html[lang="fa"] .contact h2{line-height:1.45;max-width:18ch}
+.contact .lead{color:var(--block-ink-2);font-size:18px;margin-top:18px}
+.reach{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mail{display:inline-flex;align-items:center;gap:4px;background:var(--block-ink);color:var(--block);border-radius:999px;padding:5px 5px 5px 20px;max-width:100%}
+html[dir="rtl"] .mail{padding:5px 20px 5px 5px}
+.mail a{font-family:var(--f-mono);font-size:15px;text-decoration:none;font-weight:500;overflow-wrap:anywhere;direction:ltr}
+.mail button{font:inherit;font-size:13.5px;display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;background:var(--block);color:var(--block-ink);padding:8px 14px;cursor:pointer;margin-inline-start:10px;transition:transform .2s var(--ease)}
+.mail button:active{transform:scale(.96)}
+.out{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--block-ink);border:1px solid color-mix(in srgb,var(--block-ink) 35%,transparent);border-radius:999px;padding:11px 18px;font-size:15px;font-weight:500;transition:background-color .2s,transform .25s var(--ease)}
+.out:hover{background:color-mix(in srgb,var(--block-ink) 12%,transparent);transform:translateY(-1px)}
+.out:active{transform:scale(.98)}
+
+footer.site{padding-block:28px 44px;font-size:13.5px;color:var(--ink-3)}
+footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px}
+
+/* scroll-driven reveal: content stays readable at rest, only position animates */
+@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){
+  .reveal{animation:lift linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+  @keyframes lift{from{transform:translateY(40px)}to{transform:none}}
+}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<a class="skip" href="#main"><span data-lang="en">Skip to content</span><span data-lang="fa">رفتن به محتوا</span></a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#intro"><i aria-hidden="true"></i><span data-lang="en">Hadi Montazeran</span><span data-lang="fa">هادی منتظران</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#work" data-nav="work"><span data-lang="en">Work</span><span data-lang="fa">پروژه</span></a>
+      <a href="#experience" data-nav="experience"><span data-lang="en">Experience</span><span data-lang="fa">سوابق</span></a>
+      <a href="#about" data-nav="about"><span data-lang="en">About</span><span data-lang="fa">درباره</span></a>
+      <a href="#contact" data-nav="contact"><span data-lang="en">Contact</span><span data-lang="fa">تماس</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-fa" aria-pressed="false">فا</button>
+    </div>
+  </div>
+</header>
+<div id="sentinel" style="position:absolute;top:0;height:8px;width:1px" aria-hidden="true"></div>
+
+<main id="main">
+<section class="hero" id="intro">
+  <div class="wrap">
+    <div>
+      <p class="role rise"><strong><span data-lang="en">Hadi Montazeran</span><span data-lang="fa">هادی منتظران</span></strong><span class="title" dir="ltr">Automation Developer | Python · RPA · AI Document Processing</span></p>
+      <h1 class="rise d1"><span data-lang="en">I automate paperwork end to end.</span><span data-lang="fa">کاغذبازی را از اول تا آخر خودکار می‌کنم.</span></h1>
+      <p class="lead rise d2"><span data-lang="en">Nine years in legal services, now building the bots, browser automation and document pipelines that do the work.</span><span data-lang="fa">نُه سال در خدمات حقوقی کار کرده‌ام و حالا ربات‌ها، اتوماسیون مرورگر و پردازش اسنادی می‌سازم که همان کار را انجام می‌دهند.</span></p>
+      <div class="cta rise d3">
+        <a class="btn btn-primary" href="#work"><span data-lang="en">See the case study</span><span data-lang="fa">مشاهده‌ی پروژه</span><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn btn-quiet" href="#contact"><span data-lang="en">Contact</span><span data-lang="fa">تماس</span></a>
+      </div>
+    </div>
+
+    <form class="check rise d4" id="idcheck" aria-labelledby="ck-title" novalidate>
+      <div class="check-head">
+        <strong id="ck-title"><span data-lang="en">Try the ID check my bot runs on every message</span><span data-lang="fa">بررسی کد ملی را امتحان کنید؛ ربات این کار را روی هر پیام انجام می‌دهد</span></strong>
+        <span><span data-lang="en">Typos are caught as they are typed, before anything reaches the court system.</span><span data-lang="fa">خطای تایپی همان لحظه گرفته می‌شود، پیش از آنکه چیزی به سامانه‌ی قضایی برسد.</span></span>
+      </div>
+      <div class="field">
+        <label for="nid"><span data-lang="en">National ID number</span><span data-lang="fa">شماره‌ی کد ملی</span></label>
+        <input id="nid" name="nid" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" maxlength="10" value="1234567891" aria-describedby="verdict">
+      </div>
+      <div class="digits" id="digits" aria-hidden="true"></div>
+      <p class="math" id="math" aria-hidden="true"></p>
+      <p class="verdict" id="verdict" role="status" aria-live="polite"></p>
+      <div class="check-foot">
+        <div class="btns">
+          <button type="button" class="chipbtn" id="typo"><span data-lang="en">Add a typo</span><span data-lang="fa">یک رقم را عوض کن</span></button>
+          <button type="button" class="chipbtn" id="reset"><span data-lang="en">Reset</span><span data-lang="fa">بازنشانی</span></button>
+        </div>
+        <small><span data-lang="en">Example number. Runs only in your browser.</span><span data-lang="fa">عدد نمونه است و فقط در مرورگر شما اجرا می‌شود.</span></small>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="stats" aria-label="Project in numbers">
+  <div class="wrap">
+    <div class="stat"><strong><span data-lang="en">30+</span><span data-lang="fa">+۳۰</span></strong><span><span data-lang="en">filing and request types automated end to end</span><span data-lang="fa">نوع دادخواست، لایحه و درخواست که کامل خودکار شده‌اند</span></span></div>
+    <div class="stat"><strong><span data-lang="en">20,405</span><span data-lang="fa">۲۰٬۴۰۵</span></strong><span><span data-lang="en">court branches matched exactly from bulk spreadsheets</span><span data-lang="fa">شعبه‌ی دادگاه که از فایل‌های اکسل دقیق شناسایی می‌شوند</span></span></div>
+    <div class="stat"><strong><span data-lang="en">180</span><span data-lang="fa">۱۸۰</span></strong><span><span data-lang="en">automated tests, including saved copies of real portal pages</span><span data-lang="fa">تست خودکار، از جمله روی نسخه‌های ذخیره‌شده‌ی صفحات واقعی</span></span></div>
+    <div class="stat"><strong><span data-lang="en">0</span><span data-lang="fa">۰</span></strong><span><span data-lang="en">rial difference from the official reference calculator</span><span data-lang="fa">ریال اختلاف با ماشین‌حساب مرجع رسمی</span></span></div>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap case">
+    <div class="case-side">
+      <h2 class="h2"><span data-lang="en">Judicial e&#8209;filing, without an operator</span><span data-lang="fa">ثبت الکترونیک پرونده، بدون اپراتور</span></h2>
+      <p class="lead"><span data-lang="en">Clients send their details and documents in a messaging app and pay in the chat. The system completes the whole filing in the government portal and returns the official tracking code.</span><span data-lang="fa">مشتری اطلاعات و مدارکش را در پیام‌رسان می‌فرستد و همان‌جا پرداخت می‌کند. سامانه کل فرایند ثبت را در درگاه رسمی انجام می‌دهد و کد رهگیری رسمی را برمی‌گرداند.</span></p>
+      <dl class="facts">
+        <div><dt><span data-lang="en">Role</span><span data-lang="fa">نقش</span></dt><dd><span data-lang="en">Designed and built it, from product to production</span><span data-lang="fa">طراحی و ساخت، از ایده تا اجرا</span></dd></div>
+        <div><dt><span data-lang="en">Year</span><span data-lang="fa">سال</span></dt><dd class="num"><span data-lang="en">2026</span><span data-lang="fa">۲۰۲۶</span></dd></div>
+        <div><dt><span data-lang="en">Built with</span><span data-lang="fa">ابزارها</span></dt><dd><div class="chips"><span class="chip">Python</span><span class="chip">asyncio</span><span class="chip">Playwright</span><span class="chip">PyMuPDF</span><span class="chip">openpyxl</span><span class="chip">Next.js</span><span class="chip">Prisma</span><span class="chip">pytest</span></div></dd></div>
+      </dl>
+    </div>
+    <div class="case-body">
+      <article class="reveal">
+        <h3><span data-lang="en">The problem</span><span data-lang="fa">مسئله</span></h3>
+        <p data-lang="en">Every filing means dozens of forms, identity inquiries and popups in a portal that has no API. Service offices did it by hand, one case at a time, and a single typo in an ID only showed up at the very last step. For banks and companies filing hundreds of cases a month, this was the bottleneck.</p>
+        <p data-lang="fa">هر ثبت یعنی ده‌ها فرم، استعلام هویت و پنجره‌ی پاپ‌آپ در درگاهی که API ندارد. دفاتر خدمات این کار را دستی و پرونده‌به‌پرونده انجام می‌دادند و یک اشتباه تایپی در کد ملی فقط در مرحله‌ی آخر معلوم می‌شد. برای بانک‌ها و شرکت‌هایی که ماهانه صدها پرونده ثبت می‌کنند، همین گلوگاه اصلی بود.</p>
+      </article>
+      <article class="reveal">
+        <h3><span data-lang="en">The approach</span><span data-lang="fa">راه‌حل</span></h3>
+        <p data-lang="en">Two apps connected over an authenticated API. A Python bot handles the conversation, validation, payments and a single browser worker that drives the portal. A Next.js admin panel records every case event and shows the office its cases, payments and queue in real time.</p>
+        <p data-lang="fa">دو برنامه که با یک API احرازهویت‌شده به هم وصل‌اند. یک ربات Python که گفتگو، اعتبارسنجی، پرداخت و یک پردازشگر مرورگر را اداره می‌کند و درگاه را پیش می‌برد. یک پنل مدیریت Next.js هم همه‌ی رویدادهای پرونده را ثبت می‌کند و پرونده‌ها، پرداخت‌ها و صف را به‌صورت زنده نشان می‌دهد.</p>
+      </article>
+      <article class="reveal">
+        <h3><span data-lang="en">The outcome</span><span data-lang="fa">نتیجه</span></h3>
+        <ul class="outcomes">
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Clients file from their phone instead of visiting an office.</span><span data-lang="fa">مشتری به‌جای مراجعه‌ی حضوری، با گوشی پرونده ثبت می‌کند.</span></span></li>
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Input errors are caught as they are typed, not at the last step.</span><span data-lang="fa">خطای ورودی همان لحظه گرفته می‌شود، نه در مرحله‌ی آخر.</span></span></li>
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Organisations file dozens of cases at once from one spreadsheet.</span><span data-lang="fa">سازمان‌ها با یک فایل اکسل ده‌ها پرونده را یک‌جا ثبت می‌کنند.</span></span></li>
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Requests sent after hours are queued and filed in order next morning.</span><span data-lang="fa">درخواست‌های خارج از ساعت کاری در صف می‌مانند و صبح به ترتیب ثبت می‌شوند.</span></span></li>
+        </ul>
+        <p class="note"><span data-lang="en">Code walkthrough available on request.</span><span data-lang="fa">بررسی کد در صورت درخواست امکان‌پذیر است.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pipeline" style="padding-top:0">
+  <div class="wrap pipe-head">
+    <div>
+      <h2 class="h2"><span data-lang="en">The life of a request</span><span data-lang="fa">مسیر یک درخواست</span></h2>
+      <p class="lead"><span data-lang="en">Six steps between a client's first message and an official tracking code.</span><span data-lang="fa">شش مرحله از اولین پیام مشتری تا کد رهگیری رسمی.</span></p>
+    </div>
+    <div class="arrows">
+      <button type="button" id="prev" aria-label="Previous step"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg></button>
+      <button type="button" id="next" aria-label="Next step"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+    </div>
+  </div>
+  <div class="track" id="track" tabindex="0" aria-label="Steps of a request">
+    <article class="stage"><span class="n">01</span><div><h3><span data-lang="en">Conversation</span><span data-lang="fa">گفتگو</span></h3><p><span data-lang="en">A state machine with more than 300 states guides the client through each service.</span><span data-lang="fa">یک ماشین حالت با بیش از ۳۰۰ وضعیت، مشتری را در هر خدمت قدم‌به‌قدم پیش می‌برد.</span></p></div><span class="tech">aiogram 3 · FSM</span></article>
+    <article class="stage"><span class="n">02</span><div><h3><span data-lang="en">Validation</span><span data-lang="fa">اعتبارسنجی</span></h3><p><span data-lang="en">IDs are checked as they are typed. Bulk spreadsheets come back with bad cells marked in red.</span><span data-lang="fa">کد ملی هنگام تایپ بررسی می‌شود. فایل‌های اکسل گروهی با سلول‌های خطادارِ قرمز برمی‌گردند.</span></p></div><span class="tech">middleware · openpyxl</span></article>
+    <article class="stage"><span class="n">03</span><div><h3><span data-lang="en">Payment</span><span data-lang="fa">پرداخت</span></h3><p><span data-lang="en">In-chat payments and a wallet that reserves balance, then a final invoice once the real court fee is known.</span><span data-lang="fa">پرداخت داخل چت و کیف پولی که موجودی را رزرو می‌کند، و بعد فاکتور نهایی وقتی هزینه‌ی واقعی دادرسی معلوم شد.</span></p></div><span class="tech">payments API · wallet</span></article>
+    <article class="stage dots"><span class="n">04</span><div><h3><span data-lang="en">Gate</span><span data-lang="fa">دروازه</span></h3><p><span data-lang="en">A persisted queue holds jobs during off-hours and outages, and releases them in order.</span><span data-lang="fa">یک صف ماندگار کارها را در ساعات تعطیل و قطعی نگه می‌دارد و به ترتیب آزاد می‌کند.</span></p></div><span class="tech">file-backed queue</span></article>
+    <article class="stage"><span class="n">05</span><div><h3><span data-lang="en">Browser worker</span><span data-lang="fa">پردازشگر مرورگر</span></h3><p><span data-lang="en">One Playwright session fills the portal's forms. E-signatures get their own priority tab.</span><span data-lang="fa">یک نشست Playwright فرم‌های درگاه را پر می‌کند. امضای الکترونیک تب اولویت‌دار خودش را دارد.</span></p></div><span class="tech">Playwright · Chromium</span></article>
+    <article class="stage fill"><span class="n">06</span><div><h3><span data-lang="en">Output</span><span data-lang="fa">خروجی</span></h3><p><span data-lang="en">The tracking code, official right-to-left PDFs, and the final print sent automatically the next day.</span><span data-lang="fa">کد رهگیری، PDFهای رسمی راست‌به‌چپ، و نسخه‌ی نهایی که روز بعد خودکار ارسال می‌شود.</span></p></div><span class="tech">reportlab · PyMuPDF</span></article>
+  </div>
+  <div class="wrap">
+    <p class="sync"><span><b data-lang="en">Admin panel.</b><b data-lang="fa">پنل مدیریت.</b> <span data-lang="en">Every step posts an event to the panel, which tracks cases, payments, credit, profit and the conversion funnel, and can message clients directly.</span><span data-lang="fa">هر مرحله یک رویداد به پنل می‌فرستد. پنل پرونده‌ها، پرداخت‌ها، اعتبار، سود و قیف تبدیل را دنبال می‌کند و می‌تواند مستقیم به مشتری پیام بدهد.</span></span></p>
+  </div>
+</section>
+
+<section class="sec" id="engineering" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2"><span data-lang="en">The hard parts</span><span data-lang="fa">بخش‌های سخت کار</span></h2>
+    <p class="lead" style="margin-top:16px"><span data-lang="en">Automation is easy until the page changes, the session drops or an upload fails halfway.</span><span data-lang="fa">اتوماسیون تا وقتی ساده است که صفحه تغییر نکند، نشست قطع نشود و بارگذاری نیمه‌کاره نماند.</span></p>
+    <div class="bento">
+      <article class="cell wide dots reveal">
+        <h3><span data-lang="en">A portal with no API</span><span data-lang="fa">درگاهی که API ندارد</span></h3>
+        <p><span data-lang="en">Popups, repeated loading bars and forced logouts are routine. A central decision table maps each known popup to retry, ask the client to correct, or alert the admin. After a forced logout the bot logs back in and resumes the same step without deleting any work.</span><span data-lang="fa">پاپ‌آپ، نوارهای بارگذاری تکراری و خروج اجباری اتفاق روزمره‌اند. یک جدول تصمیم مرکزی برای هر پاپ‌آپ مشخص می‌کند که باید دوباره تلاش کرد، از مشتری اصلاح خواست یا به مدیر هشدار داد. بعد از خروج اجباری، ربات دوباره وارد می‌شود و همان مرحله را بدون پاک کردن کار ادامه می‌دهد.</span></p>
+      </article>
+      <article class="cell reveal">
+        <h3><span data-lang="en">One browser, many clients</span><span data-lang="fa">یک مرورگر، مشتریان متعدد</span></h3>
+        <p><span data-lang="en">Jobs share one queue, so the portal never sees parallel sessions. When a job waits on a client, it keeps its tab and the worker moves on in a new one.</span><span data-lang="fa">همه‌ی کارها از یک صف عبور می‌کنند تا درگاه نشست موازی نبیند. وقتی کاری منتظر مشتری است، تبش را نگه می‌دارد و پردازشگر در تب تازه‌ای ادامه می‌دهد.</span></p>
+      </article>
+      <article class="cell tint reveal">
+        <h3><span data-lang="en">Batches that always finish</span><span data-lang="fa">دسته‌هایی که همیشه کامل می‌شوند</span></h3>
+        <p><span data-lang="en">Each spreadsheet row has a unique key, so a restart never files a case twice, and the final report always arrives.</span><span data-lang="fa">هر سطر اکسل کلید یکتا دارد، پس راه‌اندازی دوباره هیچ پرونده‌ای را دو بار ثبت نمی‌کند و گزارش نهایی همیشه می‌رسد.</span></p>
+      </article>
+      <article class="cell wide fill reveal">
+        <p class="big"><span data-lang="en">1,288,925,398<small>rials</small></span><span data-lang="fa">۱٬۲۸۸٬۹۲۵٬۳۹۸<small>ریال</small></span></p>
+        <h3><span data-lang="en">Correct to the rial</span><span data-lang="fa">دقیق تا ریال</span></h3>
+        <p><span data-lang="en">Late-payment damages follow the central bank's price index. Each month the system downloads the newest PDF report, parses it and links new months into the series. On the reference case it matches the calculator lawyers use exactly.</span><span data-lang="fa">خسارت تأخیر تأدیه بر اساس شاخص قیمت بانک مرکزی محاسبه می‌شود. سامانه هر ماه جدیدترین گزارش PDF را دانلود و استخراج می‌کند و ماه‌های جدید را به سری قبلی وصل می‌کند. نتیجه در نمونه‌ی مرجع دقیقاً با ماشین‌حسابی که وکلا استفاده می‌کنند یکی است.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="experience" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2"><span data-lang="en">Nine years inside the process I automate</span><span data-lang="fa">نُه سال کار در دل همان فرایندی که خودکارش کرده‌ام</span></h2>
+    <div class="xp">
+      <div class="xp-row now reveal">
+        <span class="yr"><span data-lang="en">2020-now</span><span data-lang="fa">۲۰۲۰ تاکنون</span></span>
+        <div>
+          <h3><span data-lang="en">Founder</span><span data-lang="fa">بنیان‌گذار</span></h3>
+          <p class="org"><span data-lang="en">Online Judicial Services, self-employed</span><span data-lang="fa">خدمات قضایی آنلاین، کسب‌وکار شخصی</span></p>
+          <p class="d"><span data-lang="en">Run an online judicial services practice for individuals, law firms and companies. Designed and built the automation system above, from the client-facing bot to the filing engine and admin panel.</span><span data-lang="fa">اداره‌ی یک مجموعه‌ی خدمات قضایی آنلاین برای اشخاص، دفاتر وکالت و شرکت‌ها. طراحی و ساخت سامانه‌ی اتوماسیونی که بالاتر معرفی شد؛ از ربات ارتباط با مشتری تا موتور ثبت پرونده و پنل مدیریت.</span></p>
+        </div>
+      </div>
+      <div class="xp-row reveal">
+        <span class="yr"><span data-lang="en">2019-2020</span><span data-lang="fa">۲۰۱۹ تا ۲۰۲۰</span></span>
+        <div>
+          <h3><span data-lang="en">Legal Services</span><span data-lang="fa">خدمات حقوقی</span></h3>
+          <p class="org"><span data-lang="en">Legal institute, self-employed</span><span data-lang="fa">مؤسسه‌ی حقوقی، شخصی</span></p>
+        </div>
+      </div>
+      <div class="xp-row reveal">
+        <span class="yr"><span data-lang="en">2017-2020</span><span data-lang="fa">۲۰۱۷ تا ۲۰۲۰</span></span>
+        <div>
+          <h3><span data-lang="en">Judicial Services Staff</span><span data-lang="fa">کارشناس دفتر خدمات قضایی</span></h3>
+          <p class="org"><span data-lang="en">Office of Judicial Services, full-time</span><span data-lang="fa">دفتر خدمات الکترونیک قضایی، تمام‌وقت</span></p>
+          <p class="d"><span data-lang="en">Filed petitions, notices and inquiries for clients through the judiciary's e-services, one case at a time. This is where I learned every step the automation now performs.</span><span data-lang="fa">ثبت دادخواست، اظهارنامه و استعلام برای مراجعان از طریق خدمات الکترونیک قضایی، پرونده‌به‌پرونده. همه‌ی مراحلی را که امروز اتوماسیون انجام می‌دهد، همین‌جا یاد گرفتم.</span></p>
+        </div>
+      </div>
+      <div class="edu reveal">
+        <h3><span data-lang="en">Education</span><span data-lang="fa">تحصیلات</span></h3>
+        <ul>
+          <li><b><span data-lang="en">Bachelor of Laws (LLB)</span><span data-lang="fa">کارشناسی حقوق</span></b><span><span data-lang="en">University of Science and Arts, Yazd, 2018-2022</span><span data-lang="fa">دانشگاه علم و هنر یزد، ۲۰۱۸ تا ۲۰۲۲</span></span></li>
+          <li><b><span data-lang="en">Computer Programming</span><span data-lang="fa">برنامه‌نویسی کامپیوتر</span></b><span><span data-lang="en">Laitec IT Training Institute, 2020-2022</span><span data-lang="fa">آزمایشگاه یادگیری فناوری اطلاعات لایتک، ۲۰۲۰ تا ۲۰۲۲</span></span></li>
+          <li><b><span data-lang="en">UI/UX Design</span><span data-lang="fa">طراحی رابط و تجربه‌ی کاربری</span></b><span><span data-lang="en">UXland, 2022-2023</span><span data-lang="fa">UXland، ۲۰۲۲ تا ۲۰۲۳</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2"><span data-lang="en">What I build with</span><span data-lang="fa">ابزارهای کار من</span></h2>
+    <div class="skills">
+      <div class="now-card reveal">
+        <div>
+          <span class="k"><span data-lang="en">Currently building</span><span data-lang="fa">در حال کار روی</span></span>
+          <h3><span data-lang="en">AI that reads documents and turns them into structured data</span><span data-lang="fa">هوش مصنوعی‌ای که اسناد را می‌خواند و به داده‌ی ساختاریافته تبدیل می‌کند</span></h3>
+        </div>
+        <p><span data-lang="en">The next step after automating the filing: extracting names, amounts and dates from scanned and unstructured documents.</span><span data-lang="fa">قدم بعد از خودکارسازی ثبت: استخراج نام، مبلغ و تاریخ از اسناد اسکن‌شده و بدون ساختار.</span></p>
+      </div>
+      <div class="groups">
+        <div class="group reveal">
+          <h3><span data-lang="en">Automation</span><span data-lang="fa">اتوماسیون</span></h3>
+          <p><span data-lang="en">Browser automation for complex web forms, job queues, retries and recovery.</span><span data-lang="fa">اتوماسیون مرورگر برای فرم‌های پیچیده‌ی وب، صف کارها، تلاش مجدد و بازیابی.</span></p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">asyncio</span><span class="chip">Playwright</span></div>
+        </div>
+        <div class="group reveal">
+          <h3><span data-lang="en">Documents</span><span data-lang="fa">اسناد</span></h3>
+          <p><span data-lang="en">Reading and generating PDF, Word and Excel files, including right-to-left layouts and OCR.</span><span data-lang="fa">خواندن و تولید فایل‌های PDF، Word و Excel، شامل چیدمان راست‌به‌چپ و OCR.</span></p>
+          <div class="chips"><span class="chip">PyMuPDF</span><span class="chip">reportlab</span><span class="chip">python-docx</span><span class="chip">openpyxl</span><span class="chip">Tesseract</span><span class="chip">OpenCV</span></div>
+        </div>
+        <div class="group reveal">
+          <h3><span data-lang="en">Bots and integrations</span><span data-lang="fa">ربات و یکپارچه‌سازی</span></h3>
+          <p><span data-lang="en">Chat bots, payment gateways, REST APIs, maps and spreadsheet services.</span><span data-lang="fa">ربات گفتگو، درگاه پرداخت، REST API، نقشه و سرویس‌های صفحه‌گسترده.</span></p>
+          <div class="chips"><span class="chip">aiogram 3</span><span class="chip">REST</span><span class="chip">gspread</span></div>
+        </div>
+        <div class="group reveal">
+          <h3><span data-lang="en">Web, data and quality</span><span data-lang="fa">وب، داده و کیفیت</span></h3>
+          <p><span data-lang="en">Admin panels, typed data models, tests, and secrets kept out of the code.</span><span data-lang="fa">پنل مدیریت، مدل داده‌ی تایپ‌شده، تست، و نگهداری اطلاعات محرمانه بیرون از کد.</span></p>
+          <div class="chips"><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Prisma</span><span class="chip">SQL Server</span><span class="chip">pytest</span><span class="chip">Git</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about" style="padding-top:0">
+  <div class="wrap about">
+    <div class="me reveal">
+      <img src="data:image/webp;base64,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" alt="Portrait of Hadi Montazeran" width="120" height="120">
+      <div>
+        <strong><span data-lang="en">Hadi Montazeran</span><span data-lang="fa">هادی منتظران</span></strong>
+        <span class="me-title" dir="ltr">Automation Developer | Python · RPA · AI Document Processing</span>
+        <span><span data-lang="en">Based in Iran, open to relocation to Canada.</span><span data-lang="fa">ساکن ایران، آماده‌ی مهاجرت به کانادا.</span></span>
+      </div>
+    </div>
+    <div class="about-body">
+      <p><span data-lang="en">I came to software from the legal side. I hold a law degree and spent years filing cases by hand, so when I automate a process I start from how it is really done, including the exceptions nobody writes down.</span><span data-lang="fa">از دنیای حقوق وارد نرم‌افزار شدم. مدرک حقوق دارم و سال‌ها پرونده‌ها را دستی ثبت کرده‌ام. برای همین وقتی فرایندی را خودکار می‌کنم، از شکل واقعی انجامش شروع می‌کنم؛ حتی استثناهایی که هیچ‌جا نوشته نشده‌اند.</span></p>
+      <p><span data-lang="en">Most of my time goes into the parts users never see: what happens when a page changes, a session drops or an upload fails halfway.</span><span data-lang="fa">بیشتر وقتم صرف بخش‌هایی می‌شود که کاربر هیچ‌وقت نمی‌بیند: وقتی صفحه تغییر می‌کند، نشست قطع می‌شود یا بارگذاری نیمه‌کاره می‌ماند چه اتفاقی می‌افتد.</span></p>
+      <ul class="ways">
+        <li class="reveal"><b><span data-lang="en">Start from the real process</span><span data-lang="fa">شروع از فرایند واقعی</span></b><span><span data-lang="en">I map how people actually do the work before writing any code.</span><span data-lang="fa">قبل از نوشتن کد، می‌فهمم آدم‌ها کار را واقعاً چطور انجام می‌دهند.</span></span></li>
+        <li class="reveal"><b><span data-lang="en">Design for failure</span><span data-lang="fa">طراحی برای خطا</span></b><span><span data-lang="en">Every step can be retried, resumed or reported. Nothing is lost silently.</span><span data-lang="fa">هر مرحله قابل تکرار، ادامه یا گزارش است و هیچ چیز بی‌صدا از دست نمی‌رود.</span></span></li>
+        <li class="reveal"><b><span data-lang="en">Check against the source</span><span data-lang="fa">سنجش با منبع رسمی</span></b><span><span data-lang="en">Numbers are tested against the official reference, not only against my own code.</span><span data-lang="fa">عددها با مرجع رسمی سنجیده می‌شوند، نه فقط با کد خودم.</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="eyebrow"><span data-lang="en">Contact</span><span data-lang="fa">تماس</span></p>
+        <h2 style="margin-top:18px"><span data-lang="en">Have a process that still runs on copy and paste?</span><span data-lang="fa">فرایندی دارید که هنوز با کپی و پیست انجام می‌شود؟</span></h2>
+        <p class="lead"><span data-lang="en">I'm open to full-time roles and project work in automation and document processing.</span><span data-lang="fa">برای همکاری تمام‌وقت و پروژه‌ای در حوزه‌ی اتوماسیون و پردازش اسناد آماده‌ام.</span></p>
+      </div>
+      <div class="reach">
+        <span class="mail">
+          <a href="mailto:hadimhn79@gmail.com" id="email">hadimhn79@gmail.com</a>
+          <button type="button" id="copy"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg><span id="copy-label">Copy</span></button>
+        </span>
+        <a class="out" href="https://www.linkedin.com/in/hadi-montazeran-4b4931239" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.790-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg>LinkedIn</a>
+        <a class="out" href="https://github.com/hadimhm2000" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.930,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.740-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.830a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></svg>GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span><span data-lang="en">© 2026 Hadi Montazeran</span><span data-lang="fa">© ۲۰۲۶ هادی منتظران</span></span>
+    <span><span data-lang="en">Project details are generalised. No client data is shown.</span><span data-lang="fa">جزئیات پروژه به‌صورت کلی آمده و هیچ اطلاعاتی از مشتریان نمایش داده نشده است.</span></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var T={
+    en:{weight:"x",check:"check",sum:"sum",mod:"mod 11",expect:"expected",got:"got",
+        ok:"Valid. The check digit matches.",
+        bad:function(e){return "Invalid. The last digit should be "+e+"."},
+        len:function(n){return "Enter 10 digits ("+n+" so far)."},
+        rep:"Invalid. Repeated digits are never a real ID.",
+        copy:"Copy",copied:"Copied",prev:"Previous step",next:"Next step",title:"Hadi Montazeran | Automation Developer"},
+    fa:{weight:"x",check:"کنترل",sum:"sum",mod:"mod 11",expect:"expected",got:"got",
+        ok:"معتبر است. رقم کنترل درست است.",
+        bad:function(e){return "نامعتبر است. رقم آخر باید "+fa(e)+" باشد."},
+        len:function(n){return "۱۰ رقم وارد کنید (تاکنون "+fa(n)+" رقم)."},
+        rep:"نامعتبر است. کد ملی با ارقام تکراری وجود ندارد.",
+        copy:"کپی",copied:"کپی شد",prev:"مرحله‌ی قبل",next:"مرحله‌ی بعد",title:"هادی منتظران | Automation Developer"}
+  };
+  function fa(n){return String(n).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]})}
+  function lang(){return root.getAttribute("lang")==="fa"?"fa":"en"}
+
+  /* language */
+  var bEn=document.getElementById("lang-en"),bFa=document.getElementById("lang-fa");
+  function setLang(l,save){
+    root.setAttribute("lang",l);root.setAttribute("dir",l==="fa"?"rtl":"ltr");
+    bEn.setAttribute("aria-pressed",l==="en");bFa.setAttribute("aria-pressed",l==="fa");
+    document.title=T[l].title;
+    document.getElementById("copy-label").textContent=T[l].copy;
+    document.getElementById("prev").setAttribute("aria-label",T[l].prev);
+    document.getElementById("next").setAttribute("aria-label",T[l].next);
+    if(save){try{localStorage.setItem("lang",l)}catch(e){}}
+    render(false);updateArrows();
+  }
+  bEn.addEventListener("click",function(){setLang("en",true)});
+  bFa.addEventListener("click",function(){setLang("fa",true)});
+
+  /* national ID check */
+  var input=document.getElementById("nid"),digits=document.getElementById("digits"),
+      math=document.getElementById("math"),verdict=document.getElementById("verdict");
+  var EXAMPLE="1234567891",last="";
+  function norm(s){return s.replace(/[۰-۹]/g,function(c){return "۰۱۲۳۴۵۶۷۸۹".indexOf(c)}).replace(/[٠-٩]/g,function(c){return "٠١٢٣٤٥٦٧٨٩".indexOf(c)}).replace(/\D/g,"").slice(0,10)}
+  var okIcon='<svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>';
+  function render(anim){
+    var t=T[lang()],v=norm(input.value);
+    if(input.value!==v)input.value=v;
+    var html="";
+    for(var i=0;i<10;i++){
+      var d=v[i]!==undefined?v[i]:"·";
+      var pop=anim&&v[i]!==last[i]&&v[i]!==undefined?" pop":"";
+      html+='<div class="'+(i===9?"ck":"")+pop+'"><b>'+d+'</b><small>'+(i===9?t.check:t.weight+(10-i))+'</small></div>';
+    }
+    digits.innerHTML=html;last=v;
+    if(v.length<10){
+      math.innerHTML="&nbsp;";verdict.className="verdict wait";verdict.textContent=t.len(v.length);return;
+    }
+    var s=0;for(var j=0;j<9;j++)s+=(+v[j])*(10-j);
+    var r=s%11,exp=r<2?r:11-r,got=+v[9];
+    math.innerHTML='sum = <em>'+s+'</em> &nbsp; '+s+' mod 11 = <em>'+r+'</em> &nbsp; '+t.expect+' <em>'+exp+'</em>, '+t.got+' <em>'+got+'</em>';
+    if(/^(\d)\1{9}$/.test(v)){verdict.className="verdict bad";verdict.textContent=t.rep;return}
+    if(exp===got){verdict.className="verdict ok";verdict.innerHTML=okIcon+"<span>"+t.ok+"</span>"}
+    else{verdict.className="verdict bad";verdict.textContent=t.bad(exp)}
+  }
+  input.addEventListener("input",function(){render(true)});
+  document.getElementById("idcheck").addEventListener("submit",function(e){e.preventDefault()});
+  document.getElementById("typo").addEventListener("click",function(){
+    var v=norm(input.value);if(v.length<10)v=EXAMPLE;
+    var i=Math.floor(Math.random()*9),d=+v[i],nd=(d+1+Math.floor(Math.random()*8))%10;
+    input.value=v.slice(0,i)+nd+v.slice(i+1);render(true);
+  });
+  document.getElementById("reset").addEventListener("click",function(){input.value=EXAMPLE;render(true)});
+
+  /* nav: border when scrolled, active section */
+  var top=document.getElementById("top");
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){top.classList.toggle("stuck",!es[0].isIntersecting)}).observe(document.getElementById("sentinel"));
+    var navs=document.querySelectorAll("[data-nav]");
+    var map={work:"work",pipeline:"work",engineering:"work",experience:"experience",skills:"experience",about:"about",contact:"contact"};
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var k=map[e.target.id];navs.forEach(function(a){a.classList.toggle("on",a.dataset.nav===k)})}})},{rootMargin:"-45% 0px -50% 0px"});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
+    var intro=new IntersectionObserver(function(es){if(es[0].isIntersecting)navs.forEach(function(a){a.classList.remove("on")})},{rootMargin:"-45% 0px -50% 0px"});
+    intro.observe(document.getElementById("intro"));
+  }
+
+  /* pipeline arrows */
+  var track=document.getElementById("track"),prev=document.getElementById("prev"),next=document.getElementById("next");
+  function step(){var c=track.querySelector(".stage");return c?c.getBoundingClientRect().width+14:300}
+  function updateArrows(){
+    var max=track.scrollWidth-track.clientWidth,x=Math.abs(track.scrollLeft);
+    prev.disabled=x<4;next.disabled=x>max-4;
+  }
+  function go(dir){var rtl=root.getAttribute("dir")==="rtl";track.scrollBy({left:(rtl?-1:1)*dir*step(),behavior:"smooth"})}
+  prev.addEventListener("click",function(){go(-1)});
+  next.addEventListener("click",function(){go(1)});
+  track.addEventListener("scroll",updateArrows,{passive:true});
+  window.addEventListener("resize",updateArrows);
+
+  /* copy email */
+  var copyBtn=document.getElementById("copy"),email=document.getElementById("email"),label=document.getElementById("copy-label");
+  copyBtn.addEventListener("click",function(){
+    function done(){label.textContent=T[lang()].copied;setTimeout(function(){label.textContent=T[lang()].copy},1800)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(email);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(email.textContent).then(done,fallback)}catch(e){fallback()}
+  });
+
+  /* start */
+  var start="en";
+  try{var s=localStorage.getItem("lang");if(s==="fa"||s==="en")start=s}catch(e){}
+  if(location.hash==="#fa")start="fa";
+  setLang(start,false);render(false);
+})();
+</script>
+
+</body>
+</html>
