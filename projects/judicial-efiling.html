@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Judicial e-filing automation</title>
+<meta name="description" content="Case study: a bot that files court paperwork end to end, from a chat message to an official tracking code.">
+<meta name="x-titles" data-en="Judicial e-filing automation" data-fa="اتوماسیون ثبت الکترونیک پرونده">
+<meta property="og:title" content="Judicial e-filing automation">
+<meta property="og:description" content="Case study: a bot that files court paperwork end to end, from a chat message to an official tracking code.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Vazirmatn:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+
+</head>
+<body>
+<a class="skip" href="#main"><span data-lang="en">Skip to content</span><span data-lang="fa">رفتن به محتوا</span></a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><i aria-hidden="true"></i><span class="full"><span data-lang="en">Hadi Montazeran</span><span data-lang="fa">هادی منتظران</span></span><span class="short"><span data-lang="en">Hadi Montazeran</span><span data-lang="fa">هادی منتظران</span></span></a>
+    <nav class="links" aria-label="Main">
+      <a href="../index.html#work" aria-current="page"><span data-lang="en">Projects</span><span data-lang="fa">پروژه‌ها</span></a>
+      <a href="../about.html"><span data-lang="en">About</span><span data-lang="fa">درباره</span></a>
+      <a href="#contact" class="hide-sm"><span data-lang="en">Contact</span><span data-lang="fa">تماس</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-fa" aria-pressed="false">فا</button>
+    </div>
+  </div>
+</header>
+<div id="sentinel" style="position:absolute;top:0;height:8px;width:1px" aria-hidden="true"></div>
+<main id="main">
+<section class="phero">
+  <div class="wrap">
+    <a class="crumb" href="../index.html#work"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg><span data-lang="en">All projects</span><span data-lang="fa">همه‌ی پروژه‌ها</span></a>
+    <div class="phero-grid">
+      <div>
+        <h1 class="rise"><span data-lang="en">Judicial e&#8209;filing, without an operator</span><span data-lang="fa">ثبت الکترونیک پرونده، بدون اپراتور</span></h1>
+        <p class="lead rise d1"><span data-lang="en">Clients send their details and documents in a messaging app and pay in the chat. The system completes the whole filing in the government portal and returns the official tracking code.</span><span data-lang="fa">مشتری اطلاعات و مدارکش را در پیام‌رسان می‌فرستد و همان‌جا پرداخت می‌کند. سامانه کل فرایند ثبت را در درگاه رسمی انجام می‌دهد و کد رهگیری رسمی را برمی‌گرداند.</span></p>
+      </div>
+      <dl class="facts rise d2">
+        <div><dt><span data-lang="en">Role</span><span data-lang="fa">نقش</span></dt><dd><span data-lang="en">Designed and built it, from product to production</span><span data-lang="fa">طراحی و ساخت، از ایده تا اجرا</span></dd></div>
+        <div><dt><span data-lang="en">Year</span><span data-lang="fa">سال</span></dt><dd class="num"><span data-lang="en">2026</span><span data-lang="fa">۲۰۲۶</span></dd></div>
+        <div><dt><span data-lang="en">Users</span><span data-lang="fa">کاربران</span></dt><dd><span data-lang="en">Individuals, law firms and company legal teams</span><span data-lang="fa">اشخاص، دفاتر وکالت و واحدهای حقوقی شرکت‌ها</span></dd></div>
+        <div><dt><span data-lang="en">Built with</span><span data-lang="fa">ابزارها</span></dt><dd><div class="chips"><span class="chip">Python</span><span class="chip">asyncio</span><span class="chip">Playwright</span><span class="chip">PyMuPDF</span><span class="chip">openpyxl</span><span class="chip">Next.js</span><span class="chip">Prisma</span><span class="chip">pytest</span></div></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Project in numbers">
+  <div class="wrap">
+    <div class="stat"><strong><span data-lang="en">30+</span><span data-lang="fa">+۳۰</span></strong><span><span data-lang="en">filing and request types automated end to end</span><span data-lang="fa">نوع دادخواست، لایحه و درخواست که کامل خودکار شده‌اند</span></span></div>
+    <div class="stat"><strong><span data-lang="en">20,405</span><span data-lang="fa">۲۰٬۴۰۵</span></strong><span><span data-lang="en">court branches matched exactly from bulk spreadsheets</span><span data-lang="fa">شعبه‌ی دادگاه که از فایل‌های اکسل دقیق شناسایی می‌شوند</span></span></div>
+    <div class="stat"><strong><span data-lang="en">180</span><span data-lang="fa">۱۸۰</span></strong><span><span data-lang="en">automated tests, including saved copies of real portal pages</span><span data-lang="fa">تست خودکار، از جمله روی نسخه‌های ذخیره‌شده‌ی صفحات واقعی</span></span></div>
+    <div class="stat"><strong><span data-lang="en">0</span><span data-lang="fa">۰</span></strong><span><span data-lang="en">rial difference from the official reference calculator</span><span data-lang="fa">ریال اختلاف با ماشین‌حساب مرجع رسمی</span></span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="story reveal">
+      <h2><span data-lang="en">The problem</span><span data-lang="fa">مسئله</span></h2>
+      <div class="story-body">
+        <p><span data-lang="en">Every filing means dozens of forms, identity inquiries and popups in a portal that has no API. Service offices did it by hand, one case at a time, and a single typo in an ID only showed up at the very last step.</span><span data-lang="fa">هر ثبت یعنی ده‌ها فرم، استعلام هویت و پنجره‌ی پاپ‌آپ در درگاهی که API ندارد. دفاتر خدمات این کار را دستی و پرونده‌به‌پرونده انجام می‌دادند و یک اشتباه تایپی در کد ملی فقط در مرحله‌ی آخر معلوم می‌شد.</span></p>
+        <p><span data-lang="en">For banks and companies filing hundreds of cases a month, this was the bottleneck.</span><span data-lang="fa">برای بانک‌ها و شرکت‌هایی که ماهانه صدها پرونده ثبت می‌کنند، همین گلوگاه اصلی بود.</span></p>
+      </div>
+    </div>
+    <div class="story reveal">
+      <h2><span data-lang="en">The approach</span><span data-lang="fa">راه‌حل</span></h2>
+      <div class="story-body">
+        <p><span data-lang="en">Two apps connected over an authenticated API. A Python bot handles the conversation, validation, payments and a single browser worker that drives the portal.</span><span data-lang="fa">دو برنامه که با یک API احرازهویت‌شده به هم وصل‌اند. یک ربات Python که گفتگو، اعتبارسنجی، پرداخت و یک پردازشگر مرورگر را اداره می‌کند و درگاه را پیش می‌برد.</span></p>
+        <p><span data-lang="en">A Next.js admin panel records every case event and shows the office its cases, payments and queue in real time.</span><span data-lang="fa">یک پنل مدیریت Next.js همه‌ی رویدادهای پرونده را ثبت می‌کند و پرونده‌ها، پرداخت‌ها و صف را به‌صورت زنده نشان می‌دهد.</span></p>
+      </div>
+    </div>
+    <div class="story reveal">
+      <h2><span data-lang="en">The outcome</span><span data-lang="fa">نتیجه</span></h2>
+      <div class="story-body">
+        <ul class="outcomes">
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Clients file from their phone instead of visiting an office.</span><span data-lang="fa">مشتری به‌جای مراجعه‌ی حضوری، با گوشی پرونده ثبت می‌کند.</span></span></li>
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Input errors are caught as they are typed, not at the last step.</span><span data-lang="fa">خطای ورودی همان لحظه گرفته می‌شود، نه در مرحله‌ی آخر.</span></span></li>
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Organisations file dozens of cases at once from one spreadsheet.</span><span data-lang="fa">سازمان‌ها با یک فایل اکسل ده‌ها پرونده را یک‌جا ثبت می‌کنند.</span></span></li>
+          <li><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span><span data-lang="en">Requests sent after hours are queued and filed in order next morning.</span><span data-lang="fa">درخواست‌های خارج از ساعت کاری در صف می‌مانند و صبح به ترتیب ثبت می‌شوند.</span></span></li>
+        </ul>
+        <p class="note"><span data-lang="en">Code walkthrough available on request.</span><span data-lang="fa">بررسی کد در صورت درخواست امکان‌پذیر است.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap pipe-head">
+    <div>
+      <h2 class="h2"><span data-lang="en">The life of a request</span><span data-lang="fa">مسیر یک درخواست</span></h2>
+      <p class="lead"><span data-lang="en">Six steps between a client's first message and an official tracking code.</span><span data-lang="fa">شش مرحله از اولین پیام مشتری تا کد رهگیری رسمی.</span></p>
+    </div>
+    <div class="arrows">
+      <button type="button" id="prev" aria-label="Previous step"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg></button>
+      <button type="button" id="next" aria-label="Next step"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+    </div>
+  </div>
+  <div class="track" id="track" tabindex="0" aria-label="Steps of a request">
+    <article class="stage"><span class="n">01</span><div><h3><span data-lang="en">Conversation</span><span data-lang="fa">گفتگو</span></h3><p><span data-lang="en">A state machine with more than 300 states guides the client through each service.</span><span data-lang="fa">یک ماشین حالت با بیش از ۳۰۰ وضعیت، مشتری را در هر خدمت قدم‌به‌قدم پیش می‌برد.</span></p></div><span class="tech">aiogram 3, FSM</span></article>
+    <article class="stage"><span class="n">02</span><div><h3><span data-lang="en">Validation</span><span data-lang="fa">اعتبارسنجی</span></h3><p><span data-lang="en">IDs are checked as they are typed. Bulk spreadsheets come back with bad cells marked in red.</span><span data-lang="fa">کد ملی هنگام تایپ بررسی می‌شود. فایل‌های اکسل گروهی با سلول‌های خطادارِ قرمز برمی‌گردند.</span></p></div><span class="tech">middleware, openpyxl</span></article>
+    <article class="stage"><span class="n">03</span><div><h3><span data-lang="en">Payment</span><span data-lang="fa">پرداخت</span></h3><p><span data-lang="en">In-chat payments and a wallet that reserves balance, then a final invoice once the real court fee is known.</span><span data-lang="fa">پرداخت داخل چت و کیف پولی که موجودی را رزرو می‌کند، و بعد فاکتور نهایی وقتی هزینه‌ی واقعی دادرسی معلوم شد.</span></p></div><span class="tech">payments API, wallet</span></article>
+    <article class="stage dots"><span class="n">04</span><div><h3><span data-lang="en">Gate</span><span data-lang="fa">دروازه</span></h3><p><span data-lang="en">A persisted queue holds jobs during off-hours and outages, and releases them in order.</span><span data-lang="fa">یک صف ماندگار کارها را در ساعات تعطیل و قطعی نگه می‌دارد و به ترتیب آزاد می‌کند.</span></p></div><span class="tech">file-backed queue</span></article>
+    <article class="stage"><span class="n">05</span><div><h3><span data-lang="en">Browser worker</span><span data-lang="fa">پردازشگر مرورگر</span></h3><p><span data-lang="en">One Playwright session fills the portal's forms. E-signatures get their own priority tab.</span><span data-lang="fa">یک نشست Playwright فرم‌های درگاه را پر می‌کند. امضای الکترونیک تب اولویت‌دار خودش را دارد.</span></p></div><span class="tech">Playwright, Chromium</span></article>
+    <article class="stage fill"><span class="n">06</span><div><h3><span data-lang="en">Output</span><span data-lang="fa">خروجی</span></h3><p><span data-lang="en">The tracking code, official right-to-left PDFs, and the final print sent automatically the next day.</span><span data-lang="fa">کد رهگیری، PDFهای رسمی راست‌به‌چپ، و نسخه‌ی نهایی که روز بعد خودکار ارسال می‌شود.</span></p></div><span class="tech">reportlab, PyMuPDF</span></article>
+  </div>
+  <div class="wrap">
+    <p class="sync"><b><span data-lang="en">Admin panel.</span><span data-lang="fa">پنل مدیریت.</span></b> <span data-lang="en">Every step posts an event to the panel, which tracks cases, payments, credit, profit and the conversion funnel, and can message clients directly.</span><span data-lang="fa">هر مرحله یک رویداد به پنل می‌فرستد. پنل پرونده‌ها، پرداخت‌ها، اعتبار، سود و قیف تبدیل را دنبال می‌کند و می‌تواند مستقیم به مشتری پیام بدهد.</span></p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2"><span data-lang="en">The hard parts</span><span data-lang="fa">بخش‌های سخت کار</span></h2>
+    <p class="lead" style="margin-top:16px"><span data-lang="en">Automation is easy until the page changes, the session drops or an upload fails halfway.</span><span data-lang="fa">اتوماسیون تا وقتی ساده است که صفحه تغییر نکند، نشست قطع نشود و بارگذاری نیمه‌کاره نماند.</span></p>
+    <div class="bento">
+      <article class="cell wide dots reveal">
+        <h3><span data-lang="en">A portal with no API</span><span data-lang="fa">درگاهی که API ندارد</span></h3>
+        <p><span data-lang="en">Popups, repeated loading bars and forced logouts are routine. A central decision table maps each known popup to retry, ask the client to correct, or alert the admin. After a forced logout the bot logs back in and resumes the same step without deleting any work.</span><span data-lang="fa">پاپ‌آپ، نوارهای بارگذاری تکراری و خروج اجباری اتفاق روزمره‌اند. یک جدول تصمیم مرکزی برای هر پاپ‌آپ مشخص می‌کند که باید دوباره تلاش کرد، از مشتری اصلاح خواست یا به مدیر هشدار داد. بعد از خروج اجباری، ربات دوباره وارد می‌شود و همان مرحله را بدون پاک کردن کار ادامه می‌دهد.</span></p>
+      </article>
+      <article class="cell reveal">
+        <h3><span data-lang="en">One browser, many clients</span><span data-lang="fa">یک مرورگر، مشتریان متعدد</span></h3>
+        <p><span data-lang="en">Jobs share one queue, so the portal never sees parallel sessions. When a job waits on a client, it keeps its tab and the worker moves on in a new one.</span><span data-lang="fa">همه‌ی کارها از یک صف عبور می‌کنند تا درگاه نشست موازی نبیند. وقتی کاری منتظر مشتری است، تبش را نگه می‌دارد و پردازشگر در تب تازه‌ای ادامه می‌دهد.</span></p>
+      </article>
+      <article class="cell tint reveal">
+        <h3><span data-lang="en">Batches that always finish</span><span data-lang="fa">دسته‌هایی که همیشه کامل می‌شوند</span></h3>
+        <p><span data-lang="en">Each spreadsheet row has a unique key, so a restart never files a case twice, and the final report always arrives.</span><span data-lang="fa">هر سطر اکسل کلید یکتا دارد، پس راه‌اندازی دوباره هیچ پرونده‌ای را دو بار ثبت نمی‌کند و گزارش نهایی همیشه می‌رسد.</span></p>
+      </article>
+      <article class="cell wide fill reveal">
+        <p class="big ltr"><span data-lang="en">1,288,925,398<small>rials</small></span><span data-lang="fa">۱٬۲۸۸٬۹۲۵٬۳۹۸<small>ریال</small></span></p>
+        <h3><span data-lang="en">Correct to the rial</span><span data-lang="fa">دقیق تا ریال</span></h3>
+        <p><span data-lang="en">Late-payment damages follow the central bank's price index. Each month the system downloads the newest PDF report, parses it and links new months into the series. On the reference case it matches the calculator lawyers use exactly.</span><span data-lang="fa">خسارت تأخیر تأدیه بر اساس شاخص قیمت بانک مرکزی محاسبه می‌شود. سامانه هر ماه جدیدترین گزارش PDF را دانلود و استخراج می‌کند و ماه‌های جدید را به سری قبلی وصل می‌کند. نتیجه در نمونه‌ی مرجع دقیقاً با ماشین‌حسابی که وکلا استفاده می‌کنند یکی است.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:clamp(56px,8vw,96px)">
+  <div class="wrap">
+    <a class="next" href="regional-value.html">
+      <div><small><span data-lang="en">Next project</span><span data-lang="fa">پروژه‌ی بعدی</span></small><strong><span data-lang="en">Regional property value, from a pin on the map</span><span data-lang="fa">ارزش منطقه‌ای ملک، با یک نقطه روی نقشه</span></strong></div>
+      <span class="go"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<section class="sec" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="eyebrow"><span data-lang="en">Contact</span><span data-lang="fa">تماس</span></p>
+        <h2><span data-lang="en">Have a process that still runs on copy and paste?</span><span data-lang="fa">فرایندی دارید که هنوز با کپی و پیست انجام می‌شود؟</span></h2>
+        <p class="lead"><span data-lang="en">I'm open to full-time roles and project work in automation and document processing.</span><span data-lang="fa">برای همکاری تمام‌وقت و پروژه‌ای در حوزه‌ی اتوماسیون و پردازش اسناد آماده‌ام.</span></p>
+      </div>
+      <div class="reach">
+        <span class="mail"><a href="mailto:hadimhn79@gmail.com" id="email">hadimhn79@gmail.com</a><button type="button" data-copy="email"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg><span data-copy-label>Copy</span></button></span>
+        <a class="out" href="https://www.linkedin.com/in/hadi-montazeran-4b4931239" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg>LinkedIn</a>
+        <a class="out" href="https://github.com/hadimhm2000" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></svg>GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span><span data-lang="en">© 2026 Hadi Montazeran</span><span data-lang="fa">© ۲۰۲۶ هادی منتظران</span></span>
+    <span><span data-lang="en">Project details are generalised. No client data is shown.</span><span data-lang="fa">جزئیات پروژه‌ها به‌صورت کلی آمده و هیچ اطلاعاتی از مشتریان نمایش داده نشده است.</span></span>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

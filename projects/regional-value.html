@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Regional property value bot</title>
+<meta name="description" content="Case study: official property values from a pin on the map, with land, building and ownership-share calculations and a PDF report.">
+<meta name="x-titles" data-en="Regional property value bot" data-fa="ربات ارزش منطقه‌ای ملک">
+<meta property="og:title" content="Regional property value bot">
+<meta property="og:description" content="Case study: official property values from a pin on the map, with land, building and ownership-share calculations and a PDF report.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Vazirmatn:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+
+</head>
+<body>
+<a class="skip" href="#main"><span data-lang="en">Skip to content</span><span data-lang="fa">رفتن به محتوا</span></a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><i aria-hidden="true"></i><span class="full"><span data-lang="en">Hadi Montazeran</span><span data-lang="fa">هادی منتظران</span></span><span class="short"><span data-lang="en">Hadi Montazeran</span><span data-lang="fa">هادی منتظران</span></span></a>
+    <nav class="links" aria-label="Main">
+      <a href="../index.html#work" aria-current="page"><span data-lang="en">Projects</span><span data-lang="fa">پروژه‌ها</span></a>
+      <a href="../about.html"><span data-lang="en">About</span><span data-lang="fa">درباره</span></a>
+      <a href="#contact" class="hide-sm"><span data-lang="en">Contact</span><span data-lang="fa">تماس</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-fa" aria-pressed="false">فا</button>
+    </div>
+  </div>
+</header>
+<div id="sentinel" style="position:absolute;top:0;height:8px;width:1px" aria-hidden="true"></div>
+<main id="main">
+<section class="phero">
+  <div class="wrap">
+    <a class="crumb" href="../index.html#work"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg><span data-lang="en">All projects</span><span data-lang="fa">همه‌ی پروژه‌ها</span></a>
+    <div class="phero-grid">
+      <div>
+        <h1 class="rise"><span data-lang="en">Regional property value, from a pin on the map</span><span data-lang="fa">ارزش منطقه‌ای ملک، با یک نقطه روی نقشه</span></h1>
+        <p class="lead rise d1"><span data-lang="en">A bot for judicial service offices. Staff drop a pin or type an address, and the bot returns the official tax value of the property, worked out for land, building and the owner's share, as a PDF report.</span><span data-lang="fa">رباتی برای دفاتر خدمات قضایی. کارمند دفتر یک نقطه روی نقشه می‌گذارد یا آدرس را می‌نویسد و ربات ارزش رسمی مالیاتی ملک را، با محاسبه‌ی عرصه، اعیانی و سهم مالک، در قالب گزارش PDF تحویل می‌دهد.</span></p>
+      </div>
+      <dl class="facts rise d2">
+        <div><dt><span data-lang="en">Role</span><span data-lang="fa">نقش</span></dt><dd><span data-lang="en">Designed and built it, from product to production</span><span data-lang="fa">طراحی و ساخت، از ایده تا اجرا</span></dd></div>
+        <div><dt><span data-lang="en">Year</span><span data-lang="fa">سال</span></dt><dd class="num"><span data-lang="en">2026</span><span data-lang="fa">۲۰۲۶</span></dd></div>
+        <div><dt><span data-lang="en">Users</span><span data-lang="fa">کاربران</span></dt><dd><span data-lang="en">Judicial service offices, on subscription</span><span data-lang="fa">دفاتر خدمات قضایی، با اشتراک</span></dd></div>
+        <div><dt><span data-lang="en">Built with</span><span data-lang="fa">ابزارها</span></dt><dd><div class="chips"><span class="chip">Python</span><span class="chip">aiogram 3</span><span class="chip">requests</span><span class="chip">BeautifulSoup</span><span class="chip">reportlab</span><span class="chip">SQLite</span><span class="chip">PowerShell</span><span class="chip">pytest</span></div></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Project in numbers">
+  <div class="wrap">
+    <div class="stat"><strong><span data-lang="en">16.8k</span><span data-lang="fa">۱۶٫۸ هزار</span></strong><span><span data-lang="en">lines of Python across bot, calculators and reports</span><span data-lang="fa">خط کد Python در ربات، ماشین‌حساب‌ها و گزارش‌ها</span></span></div>
+    <div class="stat"><strong><span data-lang="en">119</span><span data-lang="fa">۱۱۹</span></strong><span><span data-lang="en">automated tests in 10 suites, including full bot flows</span><span data-lang="fa">تست خودکار در ۱۰ مجموعه، شامل سناریوهای کامل ربات</span></span></div>
+    <div class="stat"><strong><span data-lang="en">14</span><span data-lang="fa">۱۴</span></strong><span><span data-lang="en">search rings, from 50 m out to 4.5 km</span><span data-lang="fa">حلقه‌ی جستجو، از ۵۰ متر تا ۴٫۵ کیلومتر</span></span></div>
+    <div class="stat"><strong><span data-lang="en">2 wks</span><span data-lang="fa">۲ هفته</span></strong><span><span data-lang="en">from first commit to Windows Server deployment</span><span data-lang="fa">از اولین commit تا نصب روی ویندوز سرور</span></span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="story reveal">
+      <h2><span data-lang="en">The problem</span><span data-lang="fa">مسئله</span></h2>
+      <div class="story-body">
+        <p><span data-lang="en">Court fees and many property filings depend on the official regional value of the property. Getting it meant finding the right block on the tax administration's website, reading the value per square metre, then working out land, building and ownership shares by hand.</span><span data-lang="fa">هزینه‌ی دادرسی و بسیاری از دعاوی ملکی به ارزش منطقه‌ای رسمی ملک بستگی دارد. برای به دست آوردنش باید بلوک درست را در سایت سازمان امور مالیاتی پیدا می‌کردند، ارزش هر متر مربع را می‌خواندند و بعد عرصه، اعیانی و سهم مالکانه را دستی حساب می‌کردند.</span></p>
+        <p><span data-lang="en">One slip in a nested share such as half a share of 185 shares of 3 dang changes the fee, and the office answers for it.</span><span data-lang="fa">یک اشتباه در سهم تودرتو، مثل «نیم سهم از ۱۸۵ سهمِ ۳ دانگ»، هزینه را عوض می‌کند و مسئولیتش با دفتر است.</span></p>
+      </div>
+    </div>
+    <div class="story reveal">
+      <h2><span data-lang="en">The approach</span><span data-lang="fa">راه‌حل</span></h2>
+      <div class="story-body">
+        <p><span data-lang="en">The tax website is an ASP.NET WebForms page with no API. The bot reproduces the form postback with the coordinates, parses the block, row and the residential, office and commercial values, and normalises Persian and Arabic letters before matching fields.</span><span data-lang="fa">سایت مالیاتی یک صفحه‌ی ASP.NET WebForms بدون API است. ربات ارسال فرم را با مختصات بازسازی می‌کند، بلوک، ردیف و ارزش‌های مسکونی، اداری و تجاری را استخراج می‌کند و پیش از تطبیق فیلدها، حروف فارسی و عربی را یکسان می‌کند.</span></p>
+        <p><span data-lang="en">All valuation logic lives in pure Python modules with no bot dependency, so the same code runs in the bot, in admin scripts and in tests.</span><span data-lang="fa">همه‌ی منطق ارزش‌گذاری در ماژول‌های Python خالص و بدون وابستگی به ربات است، پس همان کد در ربات، اسکریپت‌های مدیریتی و تست‌ها اجرا می‌شود.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap demo">
+    <div class="demo-copy reveal">
+      <h2 class="h2"><span data-lang="en">When the pin has no value</span><span data-lang="fa">وقتی نقطه ارزش ندارد</span></h2>
+      <p><span data-lang="en">Parks, new developments and edges of town often have no published value. The bot then searches outward in rings, 8 to 16 probes per ring, rotating every other ring by half a step for better coverage.</span><span data-lang="fa">پارک‌ها، محله‌های تازه‌ساز و حاشیه‌ی شهر اغلب ارزش منتشرشده ندارند. ربات در این حالت حلقه‌به‌حلقه به بیرون جستجو می‌کند، در هر حلقه ۸ تا ۱۶ نقطه، و هر حلقه را نیم‌گام می‌چرخاند تا پوشش بهتری داشته باشد.</span></p>
+      <p><span data-lang="en">Probes run in parallel within a time budget, and a block only counts if it sits in the same city as the pin.</span><span data-lang="fa">جستجوها به‌صورت موازی و در یک بودجه‌ی زمانی اجرا می‌شوند و بلوکی پذیرفته می‌شود که در همان شهرِ نقطه باشد.</span></p>
+    </div>
+    <div class="mapbox reveal"><canvas data-rings data-big role="img" aria-label="Animation: ring search around a map pin for the nearest block with a published value"></canvas></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap demo">
+    <div class="demo-copy reveal">
+      <h2 class="h2"><span data-lang="en">Ownership shares, exactly</span><span data-lang="fa">سهم مالکانه، دقیق</span></h2>
+      <p><span data-lang="en">Deeds describe shares in dang, in shares of shares, or in percent, often nested several levels deep. The bot turns each level into an exact fraction and multiplies them, so nothing is rounded until the final rial amount.</span><span data-lang="fa">اسناد سهم را به دانگ، سهم از سهم یا درصد می‌نویسند و اغلب چند مرحله تودرتو. ربات هر مرحله را به کسر دقیق تبدیل و در هم ضرب می‌کند، پس تا مبلغ نهایی ریالی هیچ گردکردنی اتفاق نمی‌افتد.</span></p>
+      <p class="note"><span data-lang="en">This calculator is a direct port of the bot's ownership-share module. Try changing a level.</span><span data-lang="fa">این ماشین‌حساب نسخه‌ی مستقیم ماژول سهم مالکانه‌ی ربات است. یکی از مراحل را تغییر دهید.</span></p>
+    </div>
+    <form class="calc reveal" id="share" novalidate onsubmit="return false">
+      <div class="field">
+        <label for="share-value"><span data-lang="en">Total property value (rials)</span><span data-lang="fa">ارزش کل ملک (ریال)</span></label>
+        <input id="share-value" class="ltr mono" inputmode="numeric" value="12,000,000,000" autocomplete="off">
+      </div>
+      <div id="share-rows"></div>
+      <div><button type="button" class="chipbtn" id="share-add">Add a level</button></div>
+      <div id="share-out" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap pipe-head">
+    <div>
+      <h2 class="h2"><span data-lang="en">From pin to report</span><span data-lang="fa">از نقطه تا گزارش</span></h2>
+      <p class="lead"><span data-lang="en">Five steps, each one a separate module with its own tests.</span><span data-lang="fa">پنج مرحله، هر کدام یک ماژول جدا با تست‌های خودش.</span></p>
+    </div>
+    <div class="arrows">
+      <button type="button" id="prev" aria-label="Previous step"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg></button>
+      <button type="button" id="next" aria-label="Next step"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+    </div>
+  </div>
+  <div class="track" id="track" tabindex="0" aria-label="Steps from pin to report">
+    <article class="stage"><span class="n">01</span><div><h3><span data-lang="en">Location</span><span data-lang="fa">موقعیت</span></h3><p><span data-lang="en">A pin on the map, or a typed Persian address converted to coordinates by a geocoding service.</span><span data-lang="fa">یک نقطه روی نقشه، یا آدرس فارسی که با سرویس مکان‌یابی به مختصات تبدیل می‌شود.</span></p></div><span class="tech">geocoding API</span></article>
+    <article class="stage"><span class="n">02</span><div><h3><span data-lang="en">Tax value lookup</span><span data-lang="fa">استعلام ارزش</span></h3><p><span data-lang="en">The form postback is replayed with the coordinates, and block, row and values are parsed from the HTML.</span><span data-lang="fa">ارسال فرم با مختصات بازسازی و بلوک، ردیف و ارزش‌ها از HTML استخراج می‌شود.</span></p></div><span class="tech">requests, BeautifulSoup</span></article>
+    <article class="stage dots"><span class="n">03</span><div><h3><span data-lang="en">Nearest block</span><span data-lang="fa">نزدیک‌ترین بلوک</span></h3><p><span data-lang="en">If the point has no value, a parallel ring search finds the closest valued block in the same city.</span><span data-lang="fa">اگر نقطه ارزش نداشت، جستجوی موازی حلقه‌ای نزدیک‌ترین بلوک دارای ارزش را در همان شهر پیدا می‌کند.</span></p></div><span class="tech">ThreadPoolExecutor</span></article>
+    <article class="stage"><span class="n">04</span><div><h3><span data-lang="en">Valuation</span><span data-lang="fa">ارزش‌گذاری</span></h3><p><span data-lang="en">Land and building values by county, use and structure type, with floor, parking and construction-stage rules.</span><span data-lang="fa">ارزش عرصه و اعیانی بر اساس شهرستان، کاربری و نوع سازه، با قواعد طبقه، پارکینگ و مرحله‌ی ساخت.</span></p></div><span class="tech">Decimal, Fraction</span></article>
+    <article class="stage fill"><span class="n">05</span><div><h3><span data-lang="en">PDF report</span><span data-lang="fa">گزارش PDF</span></h3><p><span data-lang="en">A right-to-left report with a static map of the location, ready to attach to the filing.</span><span data-lang="fa">گزارش راست‌به‌چپ همراه با نقشه‌ی موقعیت، آماده‌ی پیوست به پرونده.</span></p></div><span class="tech">reportlab, static maps</span></article>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2"><span data-lang="en">Built to stay up</span><span data-lang="fa">ساخته‌شده برای پایداری</span></h2>
+    <p class="lead" style="margin-top:16px"><span data-lang="en">Offices rely on it during working hours, so the bot is designed around the failures that actually happen.</span><span data-lang="fa">دفاتر در ساعت کاری به آن متکی‌اند، پس ربات حول خطاهایی طراحی شده که واقعاً پیش می‌آیند.</span></p>
+    <div class="bento">
+      <article class="cell wide dots reveal">
+        <h3><span data-lang="en">Half-finished forms survive restarts</span><span data-lang="fa">فرم نیمه‌کاره با ری‌استارت پاک نمی‌شود</span></h3>
+        <p><span data-lang="en">Conversation state is stored in SQLite instead of memory. A code update or a server restart never sends someone back to the first question.</span><span data-lang="fa">وضعیت گفتگو به‌جای حافظه در SQLite ذخیره می‌شود. به‌روزرسانی کد یا ری‌استارت سرور هیچ‌کس را به سؤال اول برنمی‌گرداند.</span></p>
+      </article>
+      <article class="cell reveal">
+        <h3><span data-lang="en">Retries for a flaky API</span><span data-lang="fa">تلاش دوباره برای API ناپایدار</span></h3>
+        <p><span data-lang="en">Short server errors from the messaging platform are retried with backoff, but only for requests that are safe to repeat.</span><span data-lang="fa">خطاهای کوتاه سرور پیام‌رسان با فاصله‌ی افزایشی تکرار می‌شوند، ولی فقط برای درخواست‌هایی که تکرارشان بی‌خطر است.</span></p>
+      </article>
+      <article class="cell tint reveal">
+        <h3><span data-lang="en">Knows when the tax site is down</span><span data-lang="fa">می‌فهمد سایت مالیاتی قطع است</span></h3>
+        <p><span data-lang="en">Repeated failures mark the source as down. Users who asked during the outage are told as soon as it is back.</span><span data-lang="fa">خطاهای پیاپی، منبع را قطع علامت می‌زند. کاربرانی که در زمان قطعی درخواست داده‌اند، به محض وصل شدن خبردار می‌شوند.</span></p>
+      </article>
+      <article class="cell wide fill reveal">
+        <p class="big ltr"><span data-lang="en">10<small>seconds</small></span><span data-lang="fa">۱۰<small>ثانیه</small></span></p>
+        <h3><span data-lang="en">Back up after a crash</span><span data-lang="fa">بازگشت پس از قطعی</span></h3>
+        <p><span data-lang="en">On Windows Server, a supervisor task starts with the machine and restarts the bot within 10 seconds of a crash. A watchdog checks both every 5 minutes, and admin alerts are throttled and queued while the internet is down.</span><span data-lang="fa">روی ویندوز سرور، یک تسک ناظر با روشن شدن سرور اجرا می‌شود و ربات را ۱۰ ثانیه پس از هر قطعی دوباره بالا می‌آورد. یک پایشگر هر ۵ دقیقه هر دو را بررسی می‌کند و هشدارهای مدیر محدود می‌شوند و در زمان قطعی اینترنت در صف می‌مانند.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2"><span data-lang="en">More than valuations</span><span data-lang="fa">فراتر از ارزش منطقه‌ای</span></h2>
+    <div class="twocol">
+      <div class="reveal">
+        <h3><span data-lang="en">Legal calculators</span><span data-lang="fa">ماشین‌حساب‌های حقوقی</span></h3>
+        <ul>
+          <li><b><span data-lang="en">Late-payment damages</span><span data-lang="fa">خسارت تأخیر تأدیه</span></b><span><span data-lang="en">Indexed to the central bank's price index, fetched and parsed from its monthly PDF.</span><span data-lang="fa">بر اساس شاخص قیمت بانک مرکزی که هر ماه از PDF رسمی دریافت و استخراج می‌شود.</span></span></li>
+          <li><b><span data-lang="en">Court fees and lawyer-fee stamp duty</span><span data-lang="fa">هزینه‌ی دادرسی و تمبر حق‌الوکاله</span></b><span><span data-lang="en">Current tiered rates for first instance, appeal and cassation.</span><span data-lang="fa">نرخ‌های پلکانی فعلی برای بدوی، تجدیدنظر و فرجام.</span></span></li>
+          <li><b><span data-lang="en">Blood money and inheritance</span><span data-lang="fa">دیه و سهم‌الارث</span></b><span><span data-lang="en">Rule-based shares with tests for each case type.</span><span data-lang="fa">محاسبه‌ی قاعده‌محور با تست برای هر حالت.</span></span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3><span data-lang="en">Running it as a product</span><span data-lang="fa">اداره‌ی آن به‌عنوان محصول</span></h3>
+        <ul>
+          <li><b><span data-lang="en">Subscriptions and trials</span><span data-lang="fa">اشتراک و دوره‌ی آزمایشی</span></b><span><span data-lang="en">Plans, free trial inquiries, discount codes and PDF receipts.</span><span data-lang="fa">طرح‌های اشتراک، استعلام آزمایشی رایگان، کد تخفیف و رسید PDF.</span></span></li>
+          <li><b><span data-lang="en">Admin tools</span><span data-lang="fa">ابزارهای مدیریت</span></b><span><span data-lang="en">Broadcasts by user segment, follow-ups for trial users, scheduled backups.</span><span data-lang="fa">پیام همگانی به گروه‌های کاربران، پیگیری کاربران آزمایشی، پشتیبان‌گیری زمان‌بندی‌شده.</span></span></li>
+          <li><b><span data-lang="en">Shared-account alerts</span><span data-lang="fa">هشدار اشتراک مشترک</span></b><span><span data-lang="en">Flags unusual usage that suggests one subscription is used by several offices.</span><span data-lang="fa">استفاده‌ی غیرعادی که نشان می‌دهد یک اشتراک بین چند دفتر استفاده می‌شود را علامت می‌زند.</span></span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:32px"><span data-lang="en">The repository is private. Code walkthrough available on request.</span><span data-lang="fa">مخزن کد خصوصی است. بررسی کد در صورت درخواست امکان‌پذیر است.</span></p>
+  </div>
+</section>
+
+<section style="padding-bottom:clamp(56px,8vw,96px)">
+  <div class="wrap">
+    <a class="next" href="judicial-efiling.html">
+      <div><small><span data-lang="en">Next project</span><span data-lang="fa">پروژه‌ی بعدی</span></small><strong><span data-lang="en">Judicial e-filing, without an operator</span><span data-lang="fa">ثبت الکترونیک پرونده، بدون اپراتور</span></strong></div>
+      <span class="go"><svg class="ico flip" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<section class="sec" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="eyebrow"><span data-lang="en">Contact</span><span data-lang="fa">تماس</span></p>
+        <h2><span data-lang="en">Have a process that still runs on copy and paste?</span><span data-lang="fa">فرایندی دارید که هنوز با کپی و پیست انجام می‌شود؟</span></h2>
+        <p class="lead"><span data-lang="en">I'm open to full-time roles and project work in automation and document processing.</span><span data-lang="fa">برای همکاری تمام‌وقت و پروژه‌ای در حوزه‌ی اتوماسیون و پردازش اسناد آماده‌ام.</span></p>
+      </div>
+      <div class="reach">
+        <span class="mail"><a href="mailto:hadimhn79@gmail.com" id="email">hadimhn79@gmail.com</a><button type="button" data-copy="email"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg><span data-copy-label>Copy</span></button></span>
+        <a class="out" href="https://www.linkedin.com/in/hadi-montazeran-4b4931239" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg>LinkedIn</a>
+        <a class="out" href="https://github.com/hadimhm2000" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></svg>GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span><span data-lang="en">© 2026 Hadi Montazeran</span><span data-lang="fa">© ۲۰۲۶ هادی منتظران</span></span>
+    <span><span data-lang="en">Project details are generalised. No client data is shown.</span><span data-lang="fa">جزئیات پروژه‌ها به‌صورت کلی آمده و هیچ اطلاعاتی از مشتریان نمایش داده نشده است.</span></span>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
