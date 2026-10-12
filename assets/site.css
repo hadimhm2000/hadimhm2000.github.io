@@ -163,7 +163,7 @@ html[lang="fa"] .stat strong{font-family:var(--f-fa);font-weight:700;letter-spac
 html[lang="fa"] .phero h1{font-size:clamp(32px,4.2vw,52px);line-height:1.45}
 .phero .lead{font-size:clamp(17px,1.6vw,19.5px);margin-top:22px}
 .facts{display:grid;gap:14px;margin:0;padding:22px 0 0;border-top:1px solid var(--line)}
-.facts div{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;align-items:baseline}
+.facts > div{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;align-items:baseline}
 .facts dt{font-size:13.5px;color:var(--ink-3)}
 .facts dd{margin:0;font-size:15px}
 
