@@ -54,7 +54,7 @@
 
 <section class="stats" aria-label="Project in numbers">
   <div class="wrap">
-    <div class="stat"><strong><span data-lang="en">16.8k</span><span data-lang="fa">۱۶٫۸ هزار</span></strong><span><span data-lang="en">lines of Python across bot, calculators and reports</span><span data-lang="fa">خط کد Python در ربات، ماشین‌حساب‌ها و گزارش‌ها</span></span></div>
+    <div class="stat"><strong><span data-lang="en">14.5k</span><span data-lang="fa">۱۴٫۵ هزار</span></strong><span><span data-lang="en">lines of Python, plus 2,300 lines of tests</span><span data-lang="fa">خط کد Python، به‌علاوه‌ی ۲٬۳۰۰ خط تست</span></span></div>
     <div class="stat"><strong><span data-lang="en">119</span><span data-lang="fa">۱۱۹</span></strong><span><span data-lang="en">automated tests in 10 suites, including full bot flows</span><span data-lang="fa">تست خودکار در ۱۰ مجموعه، شامل سناریوهای کامل ربات</span></span></div>
     <div class="stat"><strong><span data-lang="en">14</span><span data-lang="fa">۱۴</span></strong><span><span data-lang="en">search rings, from 50 m out to 4.5 km</span><span data-lang="fa">حلقه‌ی جستجو، از ۵۰ متر تا ۴٫۵ کیلومتر</span></span></div>
     <div class="stat"><strong><span data-lang="en">2 wks</span><span data-lang="fa">۲ هفته</span></strong><span><span data-lang="en">from first commit to Windows Server deployment</span><span data-lang="fa">از اولین commit تا نصب روی ویندوز سرور</span></span></div>
@@ -67,7 +67,7 @@
       <h2><span data-lang="en">The problem</span><span data-lang="fa">مسئله</span></h2>
       <div class="story-body">
         <p><span data-lang="en">Court fees and many property filings depend on the official regional value of the property. Getting it meant finding the right block on the tax administration's website, reading the value per square metre, then working out land, building and ownership shares by hand.</span><span data-lang="fa">هزینه‌ی دادرسی و بسیاری از دعاوی ملکی به ارزش منطقه‌ای رسمی ملک بستگی دارد. برای به دست آوردنش باید بلوک درست را در سایت سازمان امور مالیاتی پیدا می‌کردند، ارزش هر متر مربع را می‌خواندند و بعد عرصه، اعیانی و سهم مالکانه را دستی حساب می‌کردند.</span></p>
-        <p><span data-lang="en">One slip in a nested share such as half a share of 185 shares of 3 dang changes the fee, and the office answers for it.</span><span data-lang="fa">یک اشتباه در سهم تودرتو، مثل «نیم سهم از ۱۸۵ سهمِ ۳ دانگ»، هزینه را عوض می‌کند و مسئولیتش با دفتر است.</span></p>
+        <p><span data-lang="en">One slip in a nested share such as half a share of 185 shares of 3 dang changes the result.</span><span data-lang="fa">یک اشتباه در سهم تودرتو، مثل «نیم سهم از ۱۸۵ سهمِ ۳ دانگ»، نتیجه را عوض می‌کند.</span></p>
       </div>
     </div>
     <div class="story reveal">
@@ -126,7 +126,7 @@
     <article class="stage"><span class="n">02</span><div><h3><span data-lang="en">Tax value lookup</span><span data-lang="fa">استعلام ارزش</span></h3><p><span data-lang="en">The form postback is replayed with the coordinates, and block, row and values are parsed from the HTML.</span><span data-lang="fa">ارسال فرم با مختصات بازسازی و بلوک، ردیف و ارزش‌ها از HTML استخراج می‌شود.</span></p></div><span class="tech">requests, BeautifulSoup</span></article>
     <article class="stage dots"><span class="n">03</span><div><h3><span data-lang="en">Nearest block</span><span data-lang="fa">نزدیک‌ترین بلوک</span></h3><p><span data-lang="en">If the point has no value, a parallel ring search finds the closest valued block in the same city.</span><span data-lang="fa">اگر نقطه ارزش نداشت، جستجوی موازی حلقه‌ای نزدیک‌ترین بلوک دارای ارزش را در همان شهر پیدا می‌کند.</span></p></div><span class="tech">ThreadPoolExecutor</span></article>
     <article class="stage"><span class="n">04</span><div><h3><span data-lang="en">Valuation</span><span data-lang="fa">ارزش‌گذاری</span></h3><p><span data-lang="en">Land and building values by county, use and structure type, with floor, parking and construction-stage rules.</span><span data-lang="fa">ارزش عرصه و اعیانی بر اساس شهرستان، کاربری و نوع سازه، با قواعد طبقه، پارکینگ و مرحله‌ی ساخت.</span></p></div><span class="tech">Decimal, Fraction</span></article>
-    <article class="stage fill"><span class="n">05</span><div><h3><span data-lang="en">PDF report</span><span data-lang="fa">گزارش PDF</span></h3><p><span data-lang="en">A right-to-left report with a static map of the location, ready to attach to the filing.</span><span data-lang="fa">گزارش راست‌به‌چپ همراه با نقشه‌ی موقعیت، آماده‌ی پیوست به پرونده.</span></p></div><span class="tech">reportlab, static maps</span></article>
+    <article class="stage fill"><span class="n">05</span><div><h3><span data-lang="en">PDF report</span><span data-lang="fa">گزارش PDF</span></h3><p><span data-lang="en">A right-to-left report with a static map of the location and every step of the calculation.</span><span data-lang="fa">گزارش راست‌به‌چپ همراه با نقشه‌ی موقعیت و همه‌ی مراحل محاسبه.</span></p></div><span class="tech">reportlab, static maps</span></article>
   </div>
 </section>
 

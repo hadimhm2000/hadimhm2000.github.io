@@ -138,7 +138,7 @@
       });
       rows.innerHTML=h;
       document.getElementById("share-add").textContent=t.add;
-      document.getElementById("share-add").disabled=chain.length>=4;
+      document.getElementById("share-add").disabled=chain.length>=6;
       compute();
     };
     var fmtDec=function(f,places){ /* fraction -> decimal string, trimmed */
@@ -175,7 +175,7 @@
     rows.addEventListener("input",function(e){var el=e.target,i=+el.getAttribute("data-i");if(isNaN(i))return;chain[i][el.getAttribute("data-f")]=el.value;compute()});
     rows.addEventListener("change",function(e){var el=e.target;if(el.tagName!=="SELECT")return;var i=+el.getAttribute("data-i");chain[i]={k:el.value,n:el.value==="dang"?"3":el.value==="percent"?"50":"1",d:"2"};draw()});
     rows.addEventListener("click",function(e){var b=e.target.closest("[data-rm]");if(!b)return;chain.splice(+b.getAttribute("data-rm"),1);draw()});
-    document.getElementById("share-add").addEventListener("click",function(){if(chain.length<4){chain.push({k:"dang",n:"6"});draw()}});
+    document.getElementById("share-add").addEventListener("click",function(){if(chain.length<6){chain.push({k:"dang",n:"6"});draw()}});
     valueIn.addEventListener("input",compute);
     onLang(draw);
   }
