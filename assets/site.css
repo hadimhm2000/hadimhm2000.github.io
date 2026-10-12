@@ -403,3 +403,17 @@ html[lang="fa"] .now-card h3{line-height:1.55}
 .group{display:grid;gap:10px;align-content:start}
 .group h3{font-size:18px;letter-spacing:-.01em}
 .group p{font-size:15px;color:var(--ink-2)}
+
+/* ---------- problems and fixes ---------- */
+.fixes{list-style:none;margin:clamp(32px,5vw,52px) 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:820px){.fixes{grid-template-columns:1fr}}
+.fix{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 24px;display:grid;gap:12px;align-content:start;min-width:0}
+.fix .area{justify-self:start;font-size:12.5px;color:var(--accent);background:var(--accent-soft);padding:2px 10px;border-radius:999px}
+.fix dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px}
+.fix dt{font-size:13px;color:var(--ink-3);padding-top:2px;white-space:nowrap}
+.fix dd{margin:0;font-size:15.5px;line-height:1.55}
+.fix dd.p{font-weight:500}
+.fix dd.f{color:var(--ink-2)}
+@media (max-width:480px){.fix dl{grid-template-columns:1fr}.fix dt{padding-top:6px}}
+.inuse{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent);padding:4px 12px;border-radius:999px;margin-bottom:18px}
+.inuse::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
