@@ -62,7 +62,7 @@ section.sec{padding-block:clamp(64px,9vw,120px)}
 .btn-primary:hover{background:var(--accent);color:var(--block-ink)}
 .btn-quiet{border-color:var(--line);color:var(--ink);background:transparent}
 .btn-quiet:hover{border-color:var(--ink-3)}
-.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:500;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .25s var(--ease)}
+.link-arrow{display:inline-flex;flex-wrap:wrap;min-width:0;max-width:100%;align-items:center;gap:8px;font-weight:500;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,gap .25s var(--ease)}
 .link-arrow:hover{border-color:var(--ink);gap:12px}
 
 /* nav */
